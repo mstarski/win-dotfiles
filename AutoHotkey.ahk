@@ -150,3 +150,12 @@ return
 ; ESC = `
 Escape::Send, ``
 Shift & Escape::Send, ~
+
+; Volume
+<^>!b::
+	SendInput {Volume_Up 5}
+return
+
+<^>!v::
+	SendInput {Volume_Down 5}
+return

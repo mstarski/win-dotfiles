@@ -4,8 +4,8 @@
 
 ### Linux
 
-- neovim
-- `tmux
+- `neovim`
+- `tmux`
 - `zsh`
 - `bat`
 - `fzf`
@@ -32,3 +32,7 @@ New-Item -ItemType SymbolicLink -Path "windows-path\to\symlink" -Target "\\wsl$\
 ```bash
 ln -s <path to the file/folder to be linked> <the path of the link to be created>
 ```
+
+### TODO:
+
+- [ ] Cleanup AutoHotkey.ahk file (use variable for root etc.)

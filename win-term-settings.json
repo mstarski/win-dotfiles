@@ -8,20 +8,6 @@
     },
     {
       "command": {
-        "action": "moveFocus",
-        "direction": "down"
-      },
-      "keys": "ctrl+m"
-    },
-    {
-      "command": {
-        "action": "splitPane",
-        "split": "right"
-      },
-      "keys": "ctrl+\\"
-    },
-    {
-      "command": {
         "action": "copy",
         "singleLine": false
       }
@@ -29,19 +15,18 @@
     {
       "command": {
         "action": "moveFocus",
-        "direction": "up"
+        "direction": "down"
       },
-      "keys": "ctrl+/"
-    },
-    {
-      "command": "paste"
+      "keys": "alt+j"
     },
     {
       "command": {
-        "action": "moveFocus",
-        "direction": "right"
-      },
-      "keys": "alt+l"
+        "action": "splitPane",
+        "split": "right"
+      }
+    },
+    {
+      "command": "paste"
     },
     {
       "command": "unbound",
@@ -53,7 +38,11 @@
     },
     {
       "command": "unbound",
-      "keys": "alt+up"
+      "keys": "alt+shift+plus"
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+shift+minus"
     },
     {
       "command": "unbound",
@@ -61,27 +50,7 @@
     },
     {
       "command": "unbound",
-      "keys": "ctrl+alt+l"
-    },
-    {
-      "command": "unbound",
-      "keys": "ctrl+alt+h"
-    },
-    {
-      "command": "unbound",
-      "keys": "ctrl+alt+j"
-    },
-    {
-      "command": "unbound",
-      "keys": "ctrl+alt+k"
-    },
-    {
-      "command": "unbound",
-      "keys": "alt+shift+plus"
-    },
-    {
-      "command": "unbound",
-      "keys": "ctrl+v"
+      "keys": "alt+up"
     },
     {
       "command": "unbound",
@@ -89,11 +58,7 @@
     },
     {
       "command": "unbound",
-      "keys": "ctrl+comma"
-    },
-    {
-      "command": "unbound",
-      "keys": "ctrl+period"
+      "keys": "ctrl+v"
     },
     {
       "command": "unbound",
@@ -102,6 +67,14 @@
     {
       "command": "unbound",
       "keys": "alt+enter"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+\\"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+'"
     },
     {
       "command": {
@@ -120,28 +93,43 @@
     },
     {
       "command": {
+        "action": "moveFocus",
+        "direction": "right"
+      },
+      "keys": "alt+l"
+    },
+    {
+      "command": {
         "action": "splitPane",
         "split": "down"
+      }
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "up"
       },
-      "keys": "ctrl+'"
+      "keys": "alt+k"
     }
   ],
   "copyFormatting": "none",
   "copyOnSelect": false,
-  "defaultProfile": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
+  "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
   "launchMode": "default",
   "profiles": {
-    "defaults": {},
+    "defaults": {
+      "colorScheme": "Tango Dark",
+      "opacity": 76,
+      "useAcrylic": true,
+      "useAtlasEngine": true
+    },
     "list": [
       {
-        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-        "elevate": true,
         "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
         "hidden": false,
         "name": "Windows PowerShell"
       },
       {
-        "commandline": "%SystemRoot%\\System32\\cmd.exe",
         "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
         "hidden": false,
         "name": "Command Prompt"
@@ -153,16 +141,22 @@
         "source": "Windows.Terminal.Azure"
       },
       {
+        "backgroundImage": "C:\\Users\\Micha\u0142 Starski\\Desktop\\sr254e1d5f80425.png",
+        "backgroundImageOpacity": 0.1,
+        "backgroundImageStretchMode": "fill",
         "colorScheme": "zenwritten_dark",
         "cursorShape": "filledBox",
+        "elevate": false,
         "font": {
-          "face": "CaskaydiaCove NF Mono"
+          "face": "JetBrainsMono Nerd Font Mono",
+          "size": 13.0
         },
-        "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
-        "hidden": true,
-        "name": "Ubuntu-22.04",
-        "opacity": 95,
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "opacity": 100,
         "padding": "0",
+        "scrollbarState": "hidden",
         "source": "Windows.Terminal.Wsl"
       },
       {

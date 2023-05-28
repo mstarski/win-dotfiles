@@ -23,10 +23,6 @@ vim.keymap.set("n", "<DOWN>", "<nop>")
 vim.keymap.set("n", "<LEFT>", "<nop>")
 vim.keymap.set("n", "<RIGHT>", "<nop>")
 
--- Go to prev/next buffer with TAB/S-Tab
-vim.keymap.set("n", "<Tab>", ":bnext<CR>")
-vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
-
 -- Splits
 vim.keymap.set("", "<leader>\\", ":vs<CR> :wincmd l<CR>")
 vim.keymap.set("", "<leader>'", ":sv<CR> :wincmd j<CR>")
