@@ -4,11 +4,15 @@
 
 ### Linux
 
-- `neovim`
+- `neovim (appimage)`
 - `tmux`
 - `zsh`
-- `bat`
+- `batcat`
 - `fzf`
+- `ranger`
+- `pnpm`
+- `zoxide`
+- `zsh-autosuggestions`
 
 ### Windows
 
@@ -36,3 +40,4 @@ ln -s <path to the file/folder to be linked> <the path of the link to be created
 ### TODO:
 
 - [ ] Cleanup AutoHotkey.ahk file (use variable for root etc.)
+- [ ] Find a way to keep secrets in another file so `zshrc` can also be symlinked safely across environments
