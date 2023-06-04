@@ -47,7 +47,7 @@ WinGet MX, MinMax, A
 if WinExist("ahk_exe chrome.exe") {
 	WinActivate
 } else {
-	run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk"
+	run, A_AppDataCommon . "\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk"
 }
 return
 
@@ -59,12 +59,12 @@ return
 try {
 	RunOrActivate("Spotify.exe")
 } catch e {
-	RunOrActivate("C:\Users\micha\AppData\Roaming\Spotify\Spotify.exe")
+	RunOrActivate(A_AppData . "\Spotify\Spotify.exe")
 }
 return
 
 #^o::
-RunOrActivate("C:\Users\micha\AppData\Local\Obsidian\Obsidian.exe")
+RunOrActivate("C:\Users\" . A_UserName . "\AppData\Local\Obsidian\Obsidian.exe")
 return
 
 #^+s::
@@ -72,26 +72,22 @@ RunOrActivate("D:\Steam\steam.exe")
 return
 
 #^d::
-RunOrActivate("C:\Users\micha\AppData\Local\Discord\Update.exe --processStart Discord.exe")
+RunOrActivate("C:\Users\" . A_UserName . "\AppData\Local\Discord\Update.exe --processStart Discord.exe")
 return
 
-#e::
-
+#^e:: ; Emoji Viewer
+if WinExist("ahk_class ApplicationFrameWindow") {
+    WinActivate
+} else {
+    RunOrActivate("explorer.exe shell:appsFolder\10324Dexterux.EmojiViewer_gz1h4f46x191r!App")
+}
 return
-
-;#^e:: ; Emoji Viewer
-;if WinExist("ahk_class ApplicationFrameWindow") {
-;	WinActivate
-;} else {
-;	RunOrActivate("explorer.exe shell:appsFolder\10324Dexterux.EmojiViewer_gz1h4f46x191r!App")
-;}
-;return
 
 #^Space::
 try {
 	RunOrActivate("WindowsTerminal.exe")
 } catch e {
-	RunOrActivate("C:\Users\micha\AppData\Local\Microsoft\WindowsApps\wt.exe")
+	RunOrActivate("C:\Users\" . A_UserName . "\AppData\Local\Microsoft\WindowsApps\wt.exe")
 }
 return
 

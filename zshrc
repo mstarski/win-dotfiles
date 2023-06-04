@@ -33,6 +33,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 alias v="/usr/local/bin/nvim.appimage"
 alias cfg="vim ~/.zshrc"
 alias bat="batcat"
+alias vim="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

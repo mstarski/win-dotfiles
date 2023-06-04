@@ -71,7 +71,6 @@ return require("packer").startup(function(use)
 	use("christoomey/vim-tmux-navigator")
 
 	use("junegunn/limelight.vim")
-	use("Yggdroot/indentLine")
 	use("b0o/schemastore.nvim")
 	use({ "nvim-tree/nvim-tree.lua" })
 	use({ "goolord/alpha-nvim" })
