@@ -10,10 +10,9 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+j"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": 
@@ -25,12 +24,22 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+j"
         },
         {
             "command": "paste"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
         },
         {
             "command": "unbound",
@@ -83,15 +92,6 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
                 "action": "moveFocus",
                 "direction": "left"
             },
@@ -123,7 +123,7 @@
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+    "defaultProfile": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
     "launchMode": "default",
     "profiles": 
     {
@@ -153,35 +153,23 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "backgroundImage": "C:\\Users\\Micha\u0142 Starski\\Desktop\\sr254e1d5f80425.png",
-                "backgroundImageOpacity": 0.1,
-                "backgroundImageStretchMode": "fill",
-                "colorScheme": "zenwritten_dark",
-                "cursorShape": "filledBox",
-                "elevate": false,
-                "font": 
-                {
-                    "face": "JetBrainsMono Nerd Font Mono",
-                    "size": 13.0
-                },
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "opacity": 100,
-                "padding": "0",
-                "scrollbarState": "hidden",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
                 "guid": "{d7b20cea-47a9-518c-95a4-c8bd91e2e1c6}",
                 "hidden": false,
                 "name": "Ubuntu 22.04.2 LTS",
                 "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
             },
             {
+                "colorScheme": "zenwritten_dark",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "face": "JetBrainsMono NF"
+                },
                 "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
                 "hidden": true,
                 "name": "Ubuntu-22.04",
+                "padding": "0",
+                "scrollbarState": "hidden",
                 "source": "Windows.Terminal.Wsl"
             }
         ]
