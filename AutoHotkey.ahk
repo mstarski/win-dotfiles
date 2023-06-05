@@ -44,10 +44,15 @@ WinGet MX, MinMax, A
 }
 
 #^f::
-if WinExist("ahk_exe chrome.exe") {
+RunOrActivate("chrome.exe")
+return
+
+#^\::
+SetTitleMatchMode, 2
+if WinExist("Docker") {
 	WinActivate
 } else {
-	run, A_AppDataCommon . "\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk"
+	return
 }
 return
 
@@ -75,12 +80,8 @@ return
 RunOrActivate("C:\Users\" . A_UserName . "\AppData\Local\Discord\Update.exe --processStart Discord.exe")
 return
 
-#^e:: ; Emoji Viewer
-if WinExist("ahk_class ApplicationFrameWindow") {
-    WinActivate
-} else {
-    RunOrActivate("explorer.exe shell:appsFolder\10324Dexterux.EmojiViewer_gz1h4f46x191r!App")
-}
+#^e::
+RunOrActivate("", "Slack")
 return
 
 #^Space::
