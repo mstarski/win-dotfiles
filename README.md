@@ -14,11 +14,16 @@
 - `zoxide`
 - `nvm`
 - `zsh-autosuggestions`
+- `trash-cli`
 
 ### Windows
 
 - WSL
 - Windows terminal theme: `zenwrittern_dark`
+
+### Assets
+
+- JetBrains Mono NF font
 
 ### How to use?
 
@@ -40,5 +45,4 @@ ln -s <path to the file/folder to be linked> <the path of the link to be created
 
 ### TODO:
 
-- [ ] Cleanup AutoHotkey.ahk file (use variable for root etc.)
 - [ ] Find a way to keep secrets in another file so `zshrc` can also be symlinked safely across environments

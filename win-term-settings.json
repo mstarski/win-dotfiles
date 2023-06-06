@@ -10,9 +10,10 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+j"
         },
         {
             "command": 
@@ -24,22 +25,12 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+j"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": "paste"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
         },
         {
             "command": "unbound",
@@ -88,6 +79,15 @@
         {
             "command": "unbound",
             "keys": "ctrl+'"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
         },
         {
             "command": 
@@ -160,13 +160,14 @@
             },
             {
                 "colorScheme": "zenwritten_dark",
+                "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
                 "cursorShape": "filledBox",
                 "font": 
                 {
                     "face": "JetBrainsMono NF"
                 },
                 "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
-                "hidden": true,
+                "hidden": false,
                 "name": "Ubuntu-22.04",
                 "padding": "0",
                 "scrollbarState": "hidden",
