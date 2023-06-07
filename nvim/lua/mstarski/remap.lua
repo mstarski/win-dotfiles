@@ -34,5 +34,5 @@ vim.keymap.set("n", "<M-q>", ":Bwipeout<CR>")
 vim.keymap.set("n", "+", ":vertical res +5<CR>")
 vim.keymap.set("n", "=", ":vertical res -5<CR>")
 
-vim.keymap.set("n", '"', ":res +5<CR>")
-vim.keymap.set("n", "'", ":res -5<CR>")
+vim.keymap.set("n", "_", ":res +5<CR>")
+vim.keymap.set("n", "-", ":res -5<CR>")
