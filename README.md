@@ -27,9 +27,17 @@
 
 ### How to use?
 
-Symlink every file to a place where it should be used.
+## Symlinks
+
+Symlink config files to a place where it should be used.
 This way every change to any of the files will reflect to this repo and
 making the process nice and easy.
+
+## Git aliases
+
+```bash
+git config --global include.path <ABS PATH TO gitalias.txt>
+```
 
 #### Windows symlink command
 
