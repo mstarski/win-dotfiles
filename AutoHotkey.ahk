@@ -156,3 +156,12 @@ return
 <^>!v::
 	SendInput {Volume_Down 5}
 return
+
+; Changing desktops
+<^>!1::
+    SendEvent ^#{Left}
+return
+
+<^>!2::
+    SendEvent ^#{Right}
+return
