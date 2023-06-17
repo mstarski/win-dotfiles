@@ -15,6 +15,7 @@
 - `nvm`
 - `zsh-autosuggestions`
 - `trash-cli`
+- `pipx`
 
 ### Windows
 

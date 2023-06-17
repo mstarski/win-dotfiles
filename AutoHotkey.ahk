@@ -165,3 +165,20 @@ return
 <^>!2::
     SendEvent ^#{Right}
 return
+
+; Snap window
+<^>!w::
+    SendEvent #{Up}
+return
+
+<^>!a::
+    SendEvent #{Left}
+return
+
+<^>!s::
+    SendEvent #{Down}
+return
+
+<^>!d::
+    SendEvent #{Right}
+return

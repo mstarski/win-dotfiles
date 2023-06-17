@@ -66,11 +66,11 @@ bindkey -s '^P' 'my_fzf\n'
 
 # pnpm
 export PNPM_HOME="/home/michals/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 # pnpm end
 
 # Created by `pipx` on 2023-05-10 06:48:40
 export PATH="$PATH:/home/michals/.local/bin"
-
-# Init plugins
-eval "$(zoxide init zsh)"
