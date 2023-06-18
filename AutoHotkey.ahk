@@ -167,18 +167,18 @@ return
 return
 
 ; Snap window
-<^>!w::
-    SendEvent #{Up}
-return
-
-<^>!a::
-    SendEvent #{Left}
-return
-
-<^>!s::
-    SendEvent #{Down}
-return
-
-<^>!d::
-    SendEvent #{Right}
-return
+;<^>!k::
+ ;   SendEvent #{Up}
+;return
+;
+;<^>!h::
+ ;   SendEvent #{Left}
+;return
+;
+;<^>!j::
+ ;   SendEvent #{Down}
+;return
+;
+;<^>!l::
+ ;   SendEvent #{Right}
+;return
