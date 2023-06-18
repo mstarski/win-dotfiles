@@ -74,3 +74,7 @@ esac
 
 # Created by `pipx` on 2023-05-10 06:48:40
 export PATH="$PATH:/home/michals/.local/bin"
+export PATH="$PATH:/home/michals/.dotnet/tools"
+
+# Init plugins
+eval "$(zoxide init zsh)"
