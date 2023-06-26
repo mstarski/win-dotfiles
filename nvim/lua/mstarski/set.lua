@@ -38,3 +38,5 @@ vim.g.nottimeout = true
 vim.opt.ttimeoutlen = 5
 
 vim.opt.cmdheight = 1
+
+vim.opt.formatoptions:remove({ "r", "o" })
