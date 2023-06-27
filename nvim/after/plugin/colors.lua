@@ -1,24 +1,54 @@
-function ColorMyPencils(color)
-	color = color or "rose-pine"
+require("rose-pine").setup({
+	--- @usage 'auto'|'main'|'moon'|'dawn'
+	variant = "auto",
+	--- @usage 'main'|'moon'|'dawn'
+	dark_variant = "main",
+	bold_vert_split = false,
+	dim_nc_background = false,
+	disable_background = false,
+	disable_float_background = false,
+	disable_italics = false,
 
-	if color == "codedark" then
-		vim.g.codedark_term256 = 1
-	end
+	--- @usage string hex value or named color from rosepinetheme.com/palette
+	groups = {
+		background = "base",
+		background_nc = "_experimental_nc",
+		panel = "surface",
+		panel_nc = "base",
+		border = "highlight_med",
+		comment = "muted",
+		link = "iris",
+		punctuation = "subtle",
 
-	if color == "astrotheme" then
-		require("astrotheme").setup()
+		error = "love",
+		hint = "iris",
+		info = "foam",
+		warn = "gold",
 
-		vim.g.t_Co = 256
-		vim.g.term = "screen-256color"
-		vim.g.t_ut = nil
-		vim.opt.termguicolors = true
-		vim.cmd.colorscheme("astrotheme")
-	end
+		headings = {
+			h1 = "iris",
+			h2 = "foam",
+			h3 = "rose",
+			h4 = "gold",
+			h5 = "pine",
+			h6 = "foam",
+		},
+		-- or set all headings at once
+		-- headings = 'subtle'
+	},
 
-	vim.cmd.colorscheme(color)
+	-- Change specific vim highlight groups
+	-- https://github.com/rose-pine/neovim/wiki/Recipes
+	highlight_groups = {
+		ColorColumn = { bg = "rose" },
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
+		-- Blend colours against the "base" background
+		CursorLine = { bg = "foam", blend = 10 },
+		StatusLine = { fg = "love", bg = "love", blend = 10 },
+	},
+})
 
-ColorMyPencils("rose-pine")
+vim.o.background = "light"
+
+-- Set colorscheme after options
+vim.cmd("colorscheme rose-pine")
