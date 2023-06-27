@@ -19,35 +19,35 @@ telescope.setup({
 	extensions = {
 		recent_files = {
 			only_cwd = true,
-			theme = "ivy",
+			theme = "dropdown",
 		},
 	},
 
 	pickers = {
 		find_files = {
 			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-			theme = "ivy",
+			theme = "dropdown",
 		},
 
 		git_files = {
-			theme = "ivy",
+			theme = "dropdown",
 		},
 
 		oldfiles = {
-			theme = "ivy",
+			theme = "dropdown",
 		},
 
 		live_grep = {
-			theme = "ivy",
+			theme = "dropdown",
 			literal = true,
 		},
 
 		treesitter = {
-			theme = "ivy",
+			theme = "dropdown",
 		},
 
 		recent_files = {
-			theme = "ivy",
+			theme = "dropdown",
 		},
 
 		lsp_references = {
@@ -71,6 +71,7 @@ end
 
 -- this works as both C-n and C-S-n. Terminal cannot distinguish C-x and C-S-x operations
 vim.keymap.set("n", "<C-n>", project_files)
+vim.keymap.set("n", "<C-\\>", builtin.find_files)
 
 vim.keymap.set("n", "<leader>ps", function()
 	builtin.live_grep()

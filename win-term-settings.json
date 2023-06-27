@@ -10,10 +10,9 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+j"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": 
@@ -25,12 +24,22 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+j"
         },
         {
             "command": "paste"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
         },
         {
             "command": "unbound",
@@ -83,15 +92,6 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
                 "action": "moveFocus",
                 "direction": "left"
             },
@@ -121,10 +121,17 @@
             "keys": "alt+k"
         }
     ],
+    "alwaysShowTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
     "launchMode": "default",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": 
@@ -153,18 +160,21 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
+                "colorScheme": "Solarized Light",
                 "guid": "{d7b20cea-47a9-518c-95a4-c8bd91e2e1c6}",
                 "hidden": false,
                 "name": "Ubuntu 22.04.2 LTS",
                 "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
             },
             {
-                "colorScheme": "zenwritten_dark",
+                "adjustIndistinguishableColors": "never",
+                "colorScheme": "Solarized Light",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
                 "cursorShape": "filledBox",
                 "font": 
                 {
-                    "face": "JetBrainsMono NF"
+                    "face": "JetBrainsMono NF",
+                    "weight": "medium"
                 },
                 "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
                 "hidden": false,
@@ -431,5 +441,51 @@
             "yellow": "#B77E64"
         }
     ],
-    "themes": []
+    "showTabsInTitlebar": false,
+    "theme": "light",
+    "themes": 
+    [
+        {
+            "name": "legacyDark",
+            "tab": 
+            {
+                "background": null,
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "useMica": false
+            }
+        },
+        {
+            "name": "legacyLight",
+            "tab": 
+            {
+                "background": null,
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "window": 
+            {
+                "applicationTheme": "light",
+                "useMica": false
+            }
+        },
+        {
+            "name": "legacySystem",
+            "tab": 
+            {
+                "background": null,
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "window": 
+            {
+                "applicationTheme": "system",
+                "useMica": false
+            }
+        }
+    ]
 }

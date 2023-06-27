@@ -9,4 +9,4 @@ copilot.setup({
 })
 
 -- Keybindings
-vim.keymap.set("i", "<C-l>", suggestion.accept, { noremap = false })
+vim.keymap.set("i", "<Right>", suggestion.accept, { noremap = false })
