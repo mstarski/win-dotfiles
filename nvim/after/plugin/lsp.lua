@@ -4,9 +4,10 @@ local lsp = require("lsp-zero").preset({
 })
 local schemastore = require("schemastore")
 local ts = require("typescript")
+local my_cmp = require("modules.cmp")
 
 lsp.ensure_installed({ "tsserver", "lua_ls" })
-lsp.set_sign_icons({ error = "🚨", warn = "🟡", hint = "🔵", info = "🟢" })
+lsp.set_sign_icons({ error = "🈲", warn = "🟡", hint = "🙈", info = "🔵" })
 lsp.setup({ sources = { { name = "nvim_lsp" }, { name = "nvim_lua" } } })
 
 lsp.skip_server_setup({ "tsserver" })
@@ -71,3 +72,5 @@ vim.keymap.set("n", "<M-S-r>", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>oi", ts.actions.organizeImports)
 vim.keymap.set("n", "<leader>ru", ts.actions.removeUnused)
 vim.keymap.set("n", "<leader>am", ts.actions.addMissingImports)
+
+my_cmp.setup_cmp()
