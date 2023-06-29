@@ -5,6 +5,7 @@
     c = commit
     ca = commit --amend
     co = checkout
+    com = checkout origin/HEAD
     cob = checkout -b
     del = branch -D
     br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
@@ -14,6 +15,8 @@
     done = !git push origin HEAD
     log = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
     pr = pull -r
+    prm = pull -r origin HEAD
+    prc = !git pull -r origin $(git branch --show-current)
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase --interactive
