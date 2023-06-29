@@ -76,6 +76,10 @@ return require("packer").startup(function(use)
 	use({ "goolord/alpha-nvim" })
 	use({ "moll/vim-bbye" })
 	use({ "wellle/targets.vim" })
-	use({ "zbirenbaum/copilot.lua" })
+	use({
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+	})
 	use({ "onsails/lspkind.nvim" })
 end)
