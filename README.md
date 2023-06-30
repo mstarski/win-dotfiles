@@ -17,6 +17,7 @@
 - `trash-cli`
 - `pipx`
 - `exa`
+- `gpg`
 
 ### Windows
 
@@ -52,6 +53,8 @@ New-Item -ItemType SymbolicLink -Path "windows-path\to\symlink" -Target "\\wsl$\
 ```bash
 ln -s <path to the file/folder to be linked> <the path of the link to be created>
 ```
+
+#### Unlocking secrets
 
 ### TODO:
 
