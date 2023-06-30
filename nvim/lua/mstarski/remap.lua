@@ -24,8 +24,15 @@ vim.keymap.set("n", "<LEFT>", "<nop>")
 vim.keymap.set("n", "<RIGHT>", "<nop>")
 
 -- Splits
-vim.keymap.set("", "<leader>\\", ":vs<CR> :wincmd l<CR>")
-vim.keymap.set("", "<leader>'", ":sv<CR> :wincmd j<CR>")
+vim.keymap.set("", "<leader>\\", function()
+	vim.cmd("vsplit")
+	vim.cmd("wincmd l")
+end)
+
+vim.keymap.set("", "<leader>'", function()
+	vim.cmd("split")
+	vim.cmd("wincmd j")
+end)
 
 -- Close buffers
 vim.keymap.set("n", "<M-q>", ":Bwipeout<CR>")

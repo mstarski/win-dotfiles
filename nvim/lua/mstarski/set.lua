@@ -37,4 +37,5 @@ vim.opt.colorcolumn = ""
 vim.g.nottimeout = true
 vim.opt.ttimeoutlen = 5
 
-vim.opt.cmdheight = 1
+vim.cmd([[set formatoptions-=cro]])
+vim.cmd([[set shortmess+=FW]])
