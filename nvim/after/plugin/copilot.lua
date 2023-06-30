@@ -1,12 +1,2 @@
-local copilot = require("copilot")
-local suggestion = require("copilot.suggestion")
-
-copilot.setup({
-	suggestion = {
-		enabled = true,
-		auto_trigger = true,
-	},
-})
-
--- Keybindings
-vim.keymap.set("i", "<Right>", suggestion.accept, { noremap = false })
+vim.cmd([[ imap <silent><script><expr> <Right> copilot#Accept("\<CR>") ]])
+vim.cmd([[ let g:copilot_no_tab_map = v:true]])

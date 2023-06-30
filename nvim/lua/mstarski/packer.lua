@@ -18,8 +18,7 @@ return require("packer").startup(function(use)
 	use("nvim-telescope/telescope-symbols.nvim")
 
 	use({ "rose-pine/neovim", as = "rose-pine" })
-	use({ "tomasiser/vim-code-dark" })
-	use({ "AstroNvim/astrotheme" })
+	use({ "folke/tokyonight.nvim" })
 
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("theprimeagen/harpoon")
@@ -61,25 +60,33 @@ return require("packer").startup(function(use)
 	})
 
 	use("windwp/nvim-autopairs")
-	use("ellisonleao/glow.nvim")
-
+	use("ellisonleao/glow.nvim") -- markdown preview
 	use({ "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons" })
-
 	use("phaazon/hop.nvim")
 	use("nvim-tree/nvim-web-devicons")
 	use("preservim/nerdcommenter")
 	use("christoomey/vim-tmux-navigator")
-
 	use("junegunn/limelight.vim")
 	use("b0o/schemastore.nvim")
 	use({ "nvim-tree/nvim-tree.lua" })
 	use({ "goolord/alpha-nvim" })
 	use({ "moll/vim-bbye" })
 	use({ "wellle/targets.vim" })
-	use({
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		event = "InsertEnter",
-	})
 	use({ "onsails/lspkind.nvim" })
+	use({
+		"folke/noice.nvim",
+		requires = {
+			"MunifTanjim/nui.nvim",
+		},
+	})
+	use({ "github/copilot.vim" })
+	use({
+		"jackMort/ChatGPT.nvim",
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	})
+	use({ "stevearc/resession.nvim" })
 end)

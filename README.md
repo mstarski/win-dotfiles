@@ -16,6 +16,7 @@
 - `zsh-autosuggestions`
 - `trash-cli`
 - `pipx`
+- `exa`
 
 ### Windows
 
