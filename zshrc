@@ -34,6 +34,7 @@ alias v="/usr/local/bin/nvim.appimage"
 alias cfg="vim ~/.zshrc"
 alias bat="batcat"
 alias vim="nvim"
+alias cat="batcat"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
