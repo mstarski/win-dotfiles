@@ -32,9 +32,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Aliases
 alias v="/usr/local/bin/nvim.appimage"
 alias cfg="vim ~/.zshrc"
-alias bat="batcat"
-alias vim="nvim"
 alias cat="batcat"
+alias z="zoxide"
+alias ls="exa --icons -F"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -66,7 +66,7 @@ bindkey -s '^O' 'ranger-cd\n'
 bindkey -s '^P' 'my_fzf\n'
 
 # pnpm
-export PNPM_HOME="/home/michals/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -74,8 +74,8 @@ esac
 # pnpm end
 
 # Created by `pipx` on 2023-05-10 06:48:40
-export PATH="$PATH:/home/michals/.local/bin"
-export PATH="$PATH:/home/michals/.dotnet/tools"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 # Init plugins
 eval "$(zoxide init zsh)"
