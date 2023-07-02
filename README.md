@@ -5,8 +5,9 @@
 ### Linux
 
 - `neovim (appimage)`
+- `git`
 - `tmux`
-- `zsh`
+- `zsh` (with `oh-my-zsh`)
 - `batcat`
 - `fzf`
 - `ranger`
@@ -18,6 +19,7 @@
 - `pipx`
 - `exa`
 - `gpg`
+- `python3`
 
 ### Windows
 
@@ -54,7 +56,7 @@ New-Item -ItemType SymbolicLink -Path "windows-path\to\symlink" -Target "\\wsl$\
 ln -s <path to the file/folder to be linked> <the path of the link to be created>
 ```
 
-#### Unlocking secrets
+#### Secrets
 
 ### TODO:
 
