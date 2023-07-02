@@ -1,0 +1,68 @@
+#!/usr/bin/python3
+
+import subprocess
+import json
+import re
+from colorama import Fore, Style, init
+
+
+def clrStr(string, color):
+    return color + string + Style.RESET_ALL
+
+
+def printFrame(text):
+    lines = text.split('\n')
+    maxLen = max([len(l) for l in lines])
+    print('┌' + '─' * (maxLen + 2) + '┐')
+
+    print(
+        '│' + lines[0].center(maxLen + 1) + '│')
+
+    for l in lines[1:-1]:
+        print('│ ' + l.ljust(maxLen + 8) + ' │')
+
+    print('│ ' + lines[-1].ljust(
+        maxLen) + ' │')
+
+    print('└' + '─' * (maxLen + 2) + '┘')
+
+
+def ensureExists(command):
+    s = subprocess.run(
+        f". ~/.zshrc && {command}",
+        shell=True,
+        check=True,
+        executable="/usr/bin/zsh",
+        encoding='utf-8',
+        stderr=subprocess.DEVNULL,
+        stdout=subprocess.PIPE)
+
+    not_detected = s.stdout.split('\n')[:-1]
+    message = "[mstarski/win-config] Healthcheck failed 🚑\n"
+
+    for dep in not_detected:
+        message += f"📦 {clrStr(dep, Fore.RED)} not detected\n"
+
+    message += "For fully working environment install all dependencies"
+    printFrame(message)
+
+
+def main():
+    with open('deps.json') as f:
+        data = json.load(f)
+        dependencies = data['dependencies']
+        command = ''
+
+        for d in dependencies:
+            name = d['name']
+            cmd = d['cmd']
+
+            command += f"{cmd} > /dev/null || echo {name} \n"
+
+        # Remove last \\\n from command
+        command = command[:-3]
+        ensureExists(command)
+
+
+if __name__ == "__main__":
+    main()

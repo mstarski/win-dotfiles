@@ -1,0 +1,70 @@
+{
+  "secrets": ["openapi"],
+
+  "dependencies": [
+    {
+      "name": "neovim",
+      "cmd": "nvim --version"
+    },
+    {
+      "name": "git",
+      "cmd": "git --version"
+    },
+    {
+      "name": "tmux",
+      "cmd": "tmux -V"
+    },
+    {
+      "name": "zsh",
+      "cmd": "zsh --version"
+    },
+    {
+      "name": "batcat",
+      "cmd": "batcat --version"
+    },
+    {
+      "name": "fzf",
+      "cmd": "fzf --version"
+    },
+    {
+      "name": "ranger",
+      "cmd": "ranger --version"
+    },
+    {
+      "name": "pnpm",
+      "cmd": "pnpm --version"
+    },
+    {
+      "name": "nvm",
+      "cmd": "nvm --version"
+    },
+    {
+      "name": "zsh-autosuggestions",
+      "cmd": "[[ $plugins == *zsh-autosuggestions* ]]"
+    },
+    {
+      "name": "trash-cli",
+      "cmd": "trash --version"
+    },
+    {
+      "name": "pipx",
+      "cmd": "pipx --version"
+    },
+    {
+      "name": "exa",
+      "cmd": "exa --version"
+    },
+    {
+      "name": "gpg",
+      "cmd": "gpg --version"
+    },
+    {
+      "name": "python3",
+      "cmd": "python3 --version"
+    },
+    {
+      "name": "zoxide",
+      "cmd": "zoxide --version"
+    }
+  ]
+}
