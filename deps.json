@@ -65,6 +65,10 @@
     {
       "name": "zoxide",
       "cmd": "zoxide --version"
+    },
+    {
+      "name": "bw",
+      "cmd": "bw --version"
     }
   ]
 }

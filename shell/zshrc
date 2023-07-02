@@ -1,8 +1,8 @@
-export PWD="$HOME/win-config/shell"
+export PWD="$HOME/win-dotfiles/shell"
 
 [ -f $PWD/aliases.zsh ] && source $PWD/aliases.zsh
-[ -f $PWD/common.env ] && source $PWD/common.env
-[ -f $PWD/secrets.env ] && source $PWD/secrets.env
+[ -f $PWD/common.zsh ] && source $PWD/common.zsh
+[ -f $PWD/secrets.zsh ] && source $PWD/secrets.zsh
 [ -f $PWD/functions.zsh ] && source $PWD/functions.zsh
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
