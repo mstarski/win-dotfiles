@@ -4,60 +4,64 @@
 
 ### Linux
 
-- `neovim (appimage)`
-- `git`
-- `tmux`
-- `zsh` (with `oh-my-zsh`)
-- `batcat`
-- `fzf`
-- `ranger`
-- `pnpm`
-- `zoxide`
-- `nvm`
-- `zsh-autosuggestions`
-- `trash-cli`
-- `pipx`
-- `exa`
-- `gpg`
-- `python3`
+ALl dependencies are listed in `deps.json` under `dependencies` key.
+There is a healthcheck script included that will check if everything is set up correctly.
+It can be run via
+
+```
+./healthcheck.py
+```
+
+Of course `python3` is needed to run this one.
 
 ### Windows
 
 - WSL
-- Windows terminal theme: `zenwrittern_dark`
+- Administrator access to powershell
+
+## How to use?
 
 ### Assets
 
-- JetBrains Mono NF font
+Make sure that every asset in `assets` directory is properly installed in the system (i.e font).
 
-### How to use?
+### Symlinks
 
-## Symlinks
+Symlinks will make sure that every file from this repo will be linked to the proper location.
+Files that will be symlinked:
 
-Symlink config files to a place where it should be used.
-This way every change to any of the files will reflect to this repo and
-making the process nice and easy.
+- `nvim` directory for neovim
+- `tmux.conf` for tmux configuration
+- `zshrc` for zshell configuration
+- `AutoHotkey.ahk` for AutoHotkey configration
+- `win-term-settings.json` for Windows Terminal configuration
 
-## Git aliases
+There are scripts provided that will do everything automatically on both systems:
+
+```bash
+$ ./linux-symlinks.sh
+```
+
+```powershell
+$ ./win-symlinks.ps1 # Make sure to run this one as an Administrator
+```
+
+### Git aliases
+
+A set of useful git aliases that can be injected like this:
 
 ```bash
 git config --global include.path $(pwd)/gitalias.txt
 ```
 
-#### Windows symlink command
+### Secrets
 
-```powershell
-New-Item -ItemType SymbolicLink -Path "windows-path\to\symlink" -Target "\\wsl$\Ubuntu\home\yourusername\path\to\target-thing"
-```
+If there are any secrets that have to be injected to the environment but can't be stored publicly
+there are 2 ways to store them in this repo:
 
-#### Linux symlink command
+1. Create a `secrets.zsh` file in `shell` directory and write your variables there. It's .gitignored
+   so it won't be commited to the repo.
 
-```bash
-ln -s <path to the file/folder to be linked> <the path of the link to be created>
-```
-
-#### Secrets
-
-### TODO:
-
-- [ ] Find a way to keep secrets in another file so `zshrc` can also be symlinked safely across environments
+2. Use `get-secrets.py` script that will download values from the Bitwarden CLI. These secrets must be already stored
+   encrypted to avoid pasting them in plaintext. Script will read `secrets` array from the `deps.json`, query BW for values and then
+   put it in the `~/.secrets` directory where they can be read.
