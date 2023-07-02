@@ -1,9 +1,9 @@
-export PWD="$HOME/win-dotfiles/shell"
+export SRC="$HOME/.config/win-dotfiles/shell"
 
-[ -f $PWD/aliases.zsh ] && source $PWD/aliases.zsh
-[ -f $PWD/common.zsh ] && source $PWD/common.zsh
-[ -f $PWD/secrets.zsh ] && source $PWD/secrets.zsh
-[ -f $PWD/functions.zsh ] && source $PWD/functions.zsh
+[ -f $SRC/aliases.zsh ] && source $SRC/aliases.zsh
+[ -f $SRC/common.zsh ] && source $SRC/common.zsh
+[ -f $SRC/secrets.zsh ] && source $SRC/secrets.zsh
+[ -f $SRC/functions.zsh ] && source $SRC/functions.zsh
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
