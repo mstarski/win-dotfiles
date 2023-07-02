@@ -1,11 +1,12 @@
 # My personal config for WSL workflow
+
 ![thumb-1920-116875](https://github.com/mstarski/win-dotfiles/assets/32843198/a151d914-7e31-41f4-9dda-5d08628e3c2e)
 
 ## Requirements
 
 ### Linux
 
-ALl dependencies are listed in `deps.json` under `dependencies` key.
+All dependencies are listed in `deps.json` under `dependencies` key.
 There is a healthcheck script included that will check if everything is set up correctly.
 It can be run via
 
@@ -21,6 +22,12 @@ Of course `python3` is needed to run this one.
 - Administrator access to powershell
 
 ## How to use?
+
+### Installation
+
+```bash
+git clone git@github.com:mstarski/win-dotfiles.git ~/.config/win-dotfiles
+```
 
 ### Assets
 
@@ -40,11 +47,11 @@ Files that will be symlinked:
 There are scripts provided that will do everything automatically on both systems:
 
 ```bash
-$ ./linux-symlinks.sh
+./linux-symlinks.sh
 ```
 
 ```powershell
-$ ./win-symlinks.ps1 # Make sure to run this one as an Administrator
+./win-symlinks.ps1 # Make sure to run this one as an Administrator
 ```
 
 ### Git aliases
