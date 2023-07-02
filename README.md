@@ -1,4 +1,5 @@
 # My personal config for WSL workflow
+![thumb-1920-116875](https://github.com/mstarski/win-dotfiles/assets/32843198/a151d914-7e31-41f4-9dda-5d08628e3c2e)
 
 ## Requirements
 
