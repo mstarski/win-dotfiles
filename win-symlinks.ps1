@@ -1,5 +1,8 @@
-$wsl_uname = wsl.exe -u
-$wsl_distroname = wsl.exe --list --running --quiet
+# Run this as an administrator
+
+$wsl_distroname = (wsl --list --running --quiet) -replace "\x00","" | Where-Object { $_ -like '*Ubuntu*' }
+$wsl_uname = wsl.exe -e whoami
+
 $wsl_home = "\\wsl.localhost\$wsl_distroname\home\$wsl_uname"
 
 $localappdata = [Environment]::GetFolderPath("LocalApplicationData")
@@ -28,4 +31,3 @@ if (!(Test-Path $autohotkey_script_symlink)) {
 # Wait for user input to close
 Write-Host "Press any key to continue..."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-```

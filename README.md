@@ -41,7 +41,7 @@ making the process nice and easy.
 ## Git aliases
 
 ```bash
-git config --global include.path <ABS PATH TO gitalias.txt>
+git config --global include.path $(pwd)/gitalias.txt
 ```
 
 #### Windows symlink command
