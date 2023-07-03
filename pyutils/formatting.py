@@ -16,7 +16,8 @@ def printFrame(text):
     for l in lines[1:-1]:
         print('│ ' + l.ljust(maxLen + 8) + ' │')
 
-    print('│ ' + lines[-1].ljust(
-        maxLen) + ' │')
+    if len(lines) > 1:
+        print('│ ' + lines[-1].ljust(
+            maxLen) + ' │')
 
     print('└' + '─' * (maxLen + 2) + '┘')

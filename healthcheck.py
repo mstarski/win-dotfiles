@@ -18,7 +18,7 @@ def main():
             command += f"{cmd} > /dev/null || echo {name} \n"
 
         # Remove last \\\n from command
-        command = command[:-3]
+        command = command[:-2]
 
         message = ensureExists(command)
         printFrame(message)
