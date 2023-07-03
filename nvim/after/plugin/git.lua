@@ -7,7 +7,6 @@ end)
 
 vim.keymap.set("n", "<leader>gl", telescope.git_commits)
 
-vim.keymap.set("n", "<leader>0", telescope.git_status)
 vim.keymap.set("n", "<leader>9", telescope.git_stash)
 
 -- Resolving conflicts
