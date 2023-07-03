@@ -39,8 +39,8 @@
       "cmd": "nvm --version"
     },
     {
-      "name": "zsh-autosuggestions",
-      "cmd": "[[ $plugins == *zsh-autosuggestions* ]]"
+      "name": "zsh-autosuggestions (plugin)",
+      "cmd": "[[ -f ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]"
     },
     {
       "name": "trash-cli",
@@ -65,6 +65,10 @@
     {
       "name": "zoxide",
       "cmd": "zoxide --version"
+    },
+    {
+      "name": "zsh-vi-mode (plugin)",
+      "cmd": "[[ -f ~/.oh-my-zsh/custom/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh ]]"
     },
     {
       "name": "bitwarden cli",

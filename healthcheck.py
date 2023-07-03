@@ -15,7 +15,7 @@ def main():
             name = d['name']
             cmd = d['cmd']
 
-            command += f"{cmd} > /dev/null || echo {name} \n"
+            command += f'{cmd} > /dev/null || echo "{name}" \n'
 
         # Remove last \\\n from command
         command = command[:-2]
