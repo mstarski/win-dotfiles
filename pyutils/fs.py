@@ -12,6 +12,10 @@ def ensureExists(command):
     )
 
     not_detected = s.stdout.split('\n')[:-1]
+    
+    if len(not_detected) == 0:
+        return "[mstarski/win-config] Healthcheck passed 🎉"
+
     message = "[mstarski/win-config] Healthcheck failed 🚑\n"
 
     for dep in not_detected:

@@ -67,7 +67,7 @@
       "cmd": "zoxide --version"
     },
     {
-      "name": "bw",
+      "name": "bitwarden cli",
       "cmd": "bw --version"
     }
   ]
