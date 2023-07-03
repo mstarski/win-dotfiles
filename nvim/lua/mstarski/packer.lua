@@ -89,4 +89,5 @@ return require("packer").startup(function(use)
 		},
 	})
 	use({ "stevearc/resession.nvim" })
+	use({ "norcalli/nvim-colorizer.lua" })
 end)
