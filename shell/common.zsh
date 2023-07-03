@@ -7,6 +7,7 @@ plugins=(
 	git
 	zsh-autosuggestions
     docker
+    zsh-vi-mode
 )
 
 # Preferred editor for local and remote sessions
