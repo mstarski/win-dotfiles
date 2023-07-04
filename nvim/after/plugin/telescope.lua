@@ -57,6 +57,7 @@ telescope.setup({
 })
 
 telescope.load_extension("recent_files")
+telescope.load_extension("dap")
 
 local project_files = function()
 	local opts = { hidden = true } -- define here if you want to define something
