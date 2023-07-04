@@ -2,8 +2,8 @@
 vim.keymap.set("n", "Y", "Vy")
 
 -- Move lines up and down in visual mode
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
 
 -- Keep cursor in the middle while scrolling with C-d & C-u
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -35,4 +35,4 @@ vim.keymap.set("", "<leader>'", function()
 end)
 
 -- Close buffers
-vim.keymap.set("n", "<M-q>", ":Bwipeout<CR>")
+vim.keymap.set("n", "<M-q>", ":Bwipeout<CR>", { silent = true })
