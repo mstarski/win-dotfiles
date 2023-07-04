@@ -170,15 +170,10 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "colorScheme": "Solarized Light",
-                "guid": "{d7b20cea-47a9-518c-95a4-c8bd91e2e1c6}",
-                "hidden": false,
-                "name": "Ubuntu 22.04.2 LTS",
-                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
-            },
-            {
                 "adjustIndistinguishableColors": "never",
-                "colorScheme": "Tokyo Night Day",
+                "backgroundImage": "\\\\wsl.localhost\\Ubuntu\\home\\michals\\.config\\win-dotfiles\\assets\\hatsune_running.jpg",
+                "backgroundImageOpacity": 0.12,
+                "colorScheme": "zenwritten_dark",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
                 "cursorShape": "filledBox",
                 "font": 
@@ -189,16 +184,11 @@
                 "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
                 "hidden": false,
                 "name": "Ubuntu-22.04",
-                "opacity": 80,
+                "opacity": 90,
                 "padding": "0",
                 "scrollbarState": "hidden",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
+                "source": "Windows.Terminal.Wsl",
+                "useAcrylic": false
             }
         ]
     },
@@ -482,7 +472,7 @@
         }
     ],
     "showTabsInTitlebar": false,
-    "theme": "light",
+    "theme": "dark",
     "themes": 
     [
         {

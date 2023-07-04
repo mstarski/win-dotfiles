@@ -3,6 +3,12 @@ local lualine = require("lualine")
 lualine.setup({
 	theme = "tokyonight",
 	sections = {
+		lualine_c = {
+			{
+				"filename",
+				path = 1,
+			},
+		},
 		lualine_x = {
 			{
 				require("noice").api.statusline.mode.get,
