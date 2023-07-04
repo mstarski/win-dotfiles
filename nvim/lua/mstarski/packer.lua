@@ -2,6 +2,8 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd([[packadd packer.nvim]])
 
+vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>", { noremap = true, silent = true })
+
 return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
@@ -50,7 +52,6 @@ return require("packer").startup(function(use)
 	})
 
 	use("tpope/vim-surround")
-	use("klen/nvim-test")
 	use("tpope/vim-commentary")
 	use("sbdchd/neoformat")
 
@@ -90,4 +91,26 @@ return require("packer").startup(function(use)
 	})
 	use({ "stevearc/resession.nvim" })
 	use({ "norcalli/nvim-colorizer.lua" })
+	use({
+		"mfussenegger/nvim-dap",
+		requires = {
+			{ "rcarriga/nvim-dap-ui" },
+			{ "nvim-telescope/telescope-dap.nvim" },
+			{ "mxsdev/nvim-dap-vscode-js", module = { "dap-vscode-js" } },
+			{
+				"microsoft/vscode-js-debug",
+				opt = true,
+				run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+			},
+		},
+	})
+	use({
+		"nvim-neotest/neotest",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"Issafalcon/neotest-dotnet",
+			"nvim-neotest/neotest-jest",
+		},
+	})
 end)
