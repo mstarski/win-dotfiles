@@ -12,8 +12,16 @@ $terminal_settings_path = "$localappdata\Packages\Microsoft.WindowsTerminal_8wek
 
 $terminal_settings_symlink = "$terminal_settings_path\settings.json"
 $autohotkey_script_symlink = "$desktop_path\Scripts\AutoHotkey.ahk"
+$terminal_bg_img_dest = "$localappdata\mstarski.win-dotfiles\terminal-bg"
 
-# Check if file doesn't exists
+# Create %LOCALAPPDATA%\mstarski.win-dotfiles directory if doesn't exist
+if (!(Test-Path "$localappdata\mstarski.win-dotfiles")) {
+    New-Item -ItemType Directory -Path "$localappdata\mstarski.win-dotfiles"
+    Write-Host "Directory created for win-dotfiles"
+} else {
+    Write-Host "Directory for win-dotfiles already exists"
+}
+
 if (!(Test-Path $terminal_settings_symlink)) {
     New-Item -ItemType SymbolicLink -Path $terminal_settings_symlink -Target "$wsl_home\.config\win-dotfiles\win-term-settings.json"
     Write-Host "Symlink created for Windows Terminal settings"
@@ -26,6 +34,16 @@ if (!(Test-Path $autohotkey_script_symlink)) {
     Write-Host "Symlink created for AutoHotkey script"
 } else {
     Write-Host "Symlink for AutoHotkey script already exists"
+}
+
+if(!(Test-Path $terminal_bg_img_dest)) {
+    # Copy background image to %LOCALAPPDATA%\mstarski.win-dotfiles
+    Copy-Item -Path "$wsl_home\.config\win-dotfiles\assets\terminal-bg" -Destination $terminal_bg_img_dest
+    Write-Host "Background image copied to $terminal_bg_img_dest"
+} else {
+    # Replace background image in %LOCALAPPDATA%\mstarski.win-dotfiles
+    Write-Host "Background image already exists in $terminal_bg_img_dest, replacing..."
+    Copy-Item -Path "$wsl_home\.config\win-dotfiles\assets\terminal-bg" -Destination $terminal_bg_img_dest -Force
 }
 
 # Wait for user input to close
