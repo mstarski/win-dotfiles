@@ -1,13 +1,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
+export PURE_NODE_ENABLED=0
+PURE_PROMPT_SYMBOL="$"
+
+ZSH_THEME="lambda-pure"
 
 plugins=(
 	git
 	zsh-autosuggestions
     docker
-    zsh-vi-mode
 )
 
 # Preferred editor for local and remote sessions

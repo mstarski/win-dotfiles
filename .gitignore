@@ -1,2 +1,3 @@
 shell/secrets.zsh
 **/__pycache__/
+third-party/

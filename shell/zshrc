@@ -1,15 +1,17 @@
 export SRC="$HOME/.config/win-dotfiles/shell"
 
-[ -f $SRC/aliases.zsh ] && source $SRC/aliases.zsh
 [ -f $SRC/common.zsh ] && source $SRC/common.zsh
 [ -f $SRC/secrets.zsh ] && source $SRC/secrets.zsh
 [ -f $SRC/functions.zsh ] && source $SRC/functions.zsh
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $SRC/aliases.zsh ] && source $SRC/aliases.zsh
 
 # Keybinds
 bindkey -s '^O' 'ranger-cd\n'
 bindkey -s '^P' 'my_fzf\n'
+
+bindkey -v
 
 # Init plugins
 eval "$(zoxide init zsh)"
