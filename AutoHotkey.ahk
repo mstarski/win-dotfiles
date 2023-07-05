@@ -1,5 +1,5 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
+#Hotstring EndChars `t
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
@@ -166,19 +166,19 @@ return
     SendEvent ^#{Right}
 return
 
-; Snap window
-;<^>!k::
- ;   SendEvent #{Up}
-;return
-;
-;<^>!h::
- ;   SendEvent #{Left}
-;return
-;
-;<^>!j::
- ;   SendEvent #{Down}
-;return
-;
-;<^>!l::
- ;   SendEvent #{Right}
-;return
+::,prt::
+SendInput,
+(
+{#}{#} Title
+
+{#}{#} Linked issue
+
+{#}{#} Description
+
+{#}{#}{#} New packages
+
+{#}{#}{#} Changes
+
+{#}{#}{#} How to test
+)
+return

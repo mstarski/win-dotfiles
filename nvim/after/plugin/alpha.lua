@@ -1,6 +1,7 @@
 local dashboard = require("alpha.themes.dashboard")
 dashboard.config.opts.noautocmd = true
 
+-- https://texteditor.com/multiline-text-art/
 dashboard.section.header.val = {
 	"                                                     ",
 	"  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
