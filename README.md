@@ -73,3 +73,7 @@ there are 2 ways to store them in this repo:
 2. Use `get-secrets.py` script that will download values from the Bitwarden CLI. These secrets must be already stored
    encrypted to avoid pasting them in plaintext. Script will read `secrets` array from the `deps.json`, query BW for values and then
    put it in the `~/.secrets` directory where they can be read.
+
+### Third party stuff
+
+All the third-party stuff should be placed under .gitignored folder `third-party` to not pollute the repo
