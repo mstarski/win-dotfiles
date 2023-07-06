@@ -17,6 +17,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("", "<leader>y", [["+y]])
 vim.keymap.set("", "<leader>Y", [["+Y]])
 
+-- Don't copy when pasting
+vim.keymap.set("x", "p", [["_dP]])
+
 -- Disable arrows
 vim.keymap.set("n", "<UP>", "<nop>")
 vim.keymap.set("n", "<DOWN>", "<nop>")
