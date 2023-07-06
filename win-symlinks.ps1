@@ -6,20 +6,22 @@ $wsl_uname = wsl.exe -e whoami
 $wsl_home = "\\wsl.localhost\$wsl_distroname\home\$wsl_uname"
 
 $localappdata = [Environment]::GetFolderPath("LocalApplicationData")
+$appdata = [Environment]::GetFolderPath("ApplicationData")
 $desktop_path = [Environment]::GetFolderPath("Desktop")
 
+$win_config_path = "$appdata\mstarski.win-dotfiles"
 $terminal_settings_path = "$localappdata\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
 
 $terminal_settings_symlink = "$terminal_settings_path\settings.json"
 $autohotkey_script_symlink = "$desktop_path\Scripts\AutoHotkey.ahk"
-$terminal_bg_img_dest = "$localappdata\mstarski.win-dotfiles\terminal-bg"
+$terminal_bg_img_dest = "$win_config_path\terminal-bg"
 
 # Create %LOCALAPPDATA%\mstarski.win-dotfiles directory if doesn't exist
-if (!(Test-Path "$localappdata\mstarski.win-dotfiles")) {
-    New-Item -ItemType Directory -Path "$localappdata\mstarski.win-dotfiles"
-    Write-Host "Directory created for win-dotfiles"
+if (!(Test-Path $win_config_path)) {
+    New-Item -ItemType Directory -Path $win_config_path
+    Write-Host "Data directory created for win-dotfiles"
 } else {
-    Write-Host "Directory for win-dotfiles already exists"
+    Write-Host "Data directory for win-dotfiles already exists"
 }
 
 if (!(Test-Path $terminal_settings_symlink)) {
