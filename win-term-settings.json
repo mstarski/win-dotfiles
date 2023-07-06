@@ -156,7 +156,7 @@
       },
       {
         "adjustIndistinguishableColors": "never",
-        "backgroundImage": "%LOCALAPPDATA%\\mstarski.win-dotfiles\\terminal-bg",
+        "backgroundImage": "%APPDATA%\\mstarski.win-dotfiles\\terminal-bg",
         "backgroundImageOpacity": 0.12,
         "colorScheme": "zenwritten_dark",
         "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
