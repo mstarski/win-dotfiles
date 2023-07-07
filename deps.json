@@ -65,6 +65,10 @@
     {
       "name": "bitwarden cli",
       "cmd": "bw --version"
+    },
+    {
+      "name": "ag",
+      "cmd": "ag --version"
     }
   ]
 }

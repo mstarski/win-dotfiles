@@ -20,11 +20,22 @@ vim.keymap.set("", "<leader>Y", [["+Y]])
 -- Don't copy when pasting
 vim.keymap.set("x", "p", [["_dP]])
 
--- Disable arrows
-vim.keymap.set("n", "<UP>", "<nop>")
-vim.keymap.set("n", "<DOWN>", "<nop>")
-vim.keymap.set("n", "<LEFT>", "<nop>")
-vim.keymap.set("n", "<RIGHT>", "<nop>")
+-- Arrows resize buffers
+vim.keymap.set("n", "<UP>", function()
+	vim.cmd("resize +5")
+end)
+
+vim.keymap.set("n", "<DOWN>", function()
+	vim.cmd("resize -5")
+end)
+
+vim.keymap.set("n", "<LEFT>", function()
+	vim.cmd("vertical resize +5")
+end)
+
+vim.keymap.set("n", "<RIGHT>", function()
+	vim.cmd("vertical resize -5")
+end)
 
 -- Splits
 vim.keymap.set("", "<leader>\\", function()
@@ -39,3 +50,9 @@ end)
 
 -- Close buffers
 vim.keymap.set("n", "<M-q>", ":Bwipeout<CR>", { silent = true })
+
+-- Open command line without shift
+vim.keymap.set("n", ";", ":")
+
+vim.keymap.set("n", "<C-o>", ":e#<CR>", { silent = true })
+vim.keymap.set("n", "<C-i>", "<C-^>", { silent = true })
