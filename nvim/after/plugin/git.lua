@@ -1,5 +1,7 @@
 local telescope = require("telescope.builtin")
 
+vim.keymap.set("n", "<leader>gs", ":vert G<CR>", { silent = true })
+
 -- Toggle branches
 vim.keymap.set("n", "<M-b>", function()
 	telescope.git_branches()
