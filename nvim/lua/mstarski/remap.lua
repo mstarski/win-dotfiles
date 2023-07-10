@@ -53,6 +53,6 @@ vim.keymap.set("n", "<M-q>", ":Bwipeout<CR>", { silent = true })
 
 -- Open command line without shift
 vim.keymap.set("n", ";", ":")
+vim.keymap.set("n", ":", "<nop>")
 
-vim.keymap.set("n", "<C-o>", ":e#<CR>", { silent = true })
-vim.keymap.set("n", "<C-i>", "<C-^>", { silent = true })
+vim.keymap.set("n", "`", vim.cmd.q, { silent = true })
