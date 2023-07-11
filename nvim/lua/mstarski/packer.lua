@@ -113,4 +113,5 @@ return require("packer").startup(function(use)
 			"nvim-neotest/neotest-jest",
 		},
 	})
+	use({ "mattn/emmet-vim" })
 end)
