@@ -96,7 +96,11 @@ vim.keymap.set(
 	{ noremap = true, silent = true }
 )
 
+vim.keymap.set("n", "gd", function()
+	builtin.lsp_definitions()
+end)
+
 -- Emoji
-vim.keymap.set("n", "<leader>:", function()
+vim.keymap.set("n", "<leader>;", function()
 	builtin.symbols({ sources = { "emoji", "gitmoji" } })
 end)
