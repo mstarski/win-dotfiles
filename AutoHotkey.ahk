@@ -44,7 +44,7 @@ WinGet MX, MinMax, A
 }
 
 #^f::
-RunOrActivate("chrome.exe")
+RunOrActivate("firefox.exe")
 return
 
 #^\::
