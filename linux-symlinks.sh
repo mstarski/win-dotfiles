@@ -26,6 +26,12 @@ function create_symlink {
     fi
 }
 
+if (( $EUID != 0 )); then
+    echo "Please run as root"
+    exit
+fi
+
+create_symlink /usr/bin/batcat /usr/bin/bat
 create_symlink $DOTFILES/shell/zshrc $HOME/.zshrc
 create_symlink $DOTFILES/tmux.conf $HOME/.tmux.conf
 create_symlink $DOTFILES/nvim $HOME/.config/nvim
