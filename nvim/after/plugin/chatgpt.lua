@@ -19,10 +19,34 @@ chatgpt.setup({
 	chat = {
 		question_sign = "🙋 ",
 		answer_sign = "🤖 ",
+		max_line_length = 80,
 	},
 
 	popup_layout = {
 		default = "center",
+		center = {
+			width = "50%",
+			height = "90%",
+		},
+	},
+
+	popup_input = {
+		border = {
+			highlight = "FloatBorder",
+			style = "rounded",
+			text = {
+				top_align = "center",
+				top = "🤖 What would you like to know?",
+			},
+		},
+	},
+
+	openai_params = {
+		max_tokens = 300,
+	},
+
+	openai_edit_params = {
+		model = "code-davinci-edit-001",
 	},
 })
 
