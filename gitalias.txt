@@ -16,7 +16,7 @@
     log = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
     pr = pull -r
     prm = pull -r origin HEAD
-    prc = !git pull -r origin $(git branch --show-current)
+    prc = !sh -c 'git fetch --all && git rebase origin/$(git branch --show-current)'
     rba = rebase --abort
     rbc = rebase --continue
     rbi = rebase --interactive
