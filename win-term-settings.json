@@ -10,10 +10,9 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+j"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": 
@@ -25,12 +24,22 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+j"
         },
         {
             "command": "paste"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
         },
         {
             "command": "unbound",
@@ -79,15 +88,6 @@
         {
             "command": "unbound",
             "keys": "ctrl+'"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
         },
         {
             "command": 
@@ -173,7 +173,7 @@
                 "adjustIndistinguishableColors": "never",
                 "antialiasingMode": "cleartype",
                 "backgroundImage": "%APPDATA%\\mstarski.win-dotfiles\\terminal-bg",
-                "backgroundImageOpacity": 0.12,
+                "backgroundImageOpacity": 0.0,
                 "bellStyle": "taskbar",
                 "closeOnExit": "graceful",
                 "colorScheme": "zenwritten_dark",
@@ -181,13 +181,14 @@
                 "cursorShape": "filledBox",
                 "font": 
                 {
-                    "face": "JetBrainsMono NF",
+                    "face": "ComicShannsMono Nerd Font Mono",
+                    "size": 13.0,
                     "weight": "medium"
                 },
                 "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
                 "hidden": false,
                 "name": "Ubuntu-22.04",
-                "opacity": 90,
+                "opacity": 100,
                 "padding": "0",
                 "scrollbarState": "hidden",
                 "source": "Windows.Terminal.Wsl",
@@ -457,8 +458,8 @@
             "yellow": "#808000"
         },
         {
-            "background": "#191919",
-            "black": "#191919",
+            "background": "#282C34",
+            "black": "#282C34",
             "blue": "#6099C0",
             "brightBlack": "#3D3839",
             "brightBlue": "#61ABDA",
