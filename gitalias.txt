@@ -1,6 +1,9 @@
 [alias]
     l = log --oneline
     s = status
+    st = stash
+    sta = stash apply
+    stp = stash pop
     a = add --all
     c = commit
     ca = commit --amend
