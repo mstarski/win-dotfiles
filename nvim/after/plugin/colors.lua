@@ -2,7 +2,7 @@ require("rose-pine").setup({
 	--- @usage 'auto'|'main'|'moon'|'dawn'
 	variant = "auto",
 	--- @usage 'main'|'moon'|'dawn'
-	dark_variant = "main",
+	dark_variant = "moon",
 	bold_vert_split = false,
 	dim_nc_background = false,
 	disable_background = false,
@@ -45,12 +45,18 @@ require("rose-pine").setup({
 		-- Blend colours against the "base" background
 		CursorLine = { bg = "foam", blend = 10 },
 		StatusLine = { fg = "love", bg = "love", blend = 10 },
+
+		TelescopeBorder = { fg = "highlight_high", bg = "none" },
+		TelescopeNormal = { bg = "none" },
+		TelescopePromptNormal = { bg = "base" },
+		TelescopeResultsNormal = { fg = "subtle", bg = "none" },
+		TelescopeSelection = { fg = "text", bg = "base" },
+		TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
 	},
 })
 
 -- Set colorscheme after options
 vim.cmd("colorscheme rose-pine")
--- vim.cmd("colorscheme tokyonight")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

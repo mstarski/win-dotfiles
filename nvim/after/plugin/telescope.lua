@@ -6,48 +6,43 @@ local prompt = " 🔍 "
 
 telescope.setup({
 	defaults = {
-		layout_strategy = "vertical",
 		file_ignore_patterns = { "git", "node_modules", "dist" },
 		prompt_prefix = prompt,
 
 		-- :h telescope.defaults.path_display
-		path_display = { "truncate" },
 
 		mappings = { i = { ["<esc>"] = actions.close } },
+
+		layout_strategy = "center",
+		sorting_strategy = "ascending",
+		layout_config = {
+			center = {
+				preview_cutoff = 60,
+				width = 0.9,
+				height = 0.3,
+			},
+		},
+
+		path_display = function(opts, path)
+			local tail = require("telescope.utils").path_tail(path)
+			return string.format("%s (%s)", tail, path)
+		end,
 	},
 
 	extensions = {
 		recent_files = {
 			only_cwd = true,
-			theme = "dropdown",
 		},
 	},
 
 	pickers = {
 		find_files = {
 			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-			theme = "dropdown",
-		},
-
-		git_files = {
-			theme = "dropdown",
-		},
-
-		oldfiles = {
-			theme = "dropdown",
 		},
 
 		live_grep = {
 			theme = "dropdown",
 			literal = true,
-		},
-
-		treesitter = {
-			theme = "dropdown",
-		},
-
-		recent_files = {
-			theme = "dropdown",
 		},
 
 		lsp_references = {
