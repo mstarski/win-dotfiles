@@ -25,7 +25,7 @@ chatgpt.setup({
 	popup_layout = {
 		default = "center",
 		center = {
-			width = "50%",
+			width = "60%",
 			height = "90%",
 		},
 	},
@@ -42,6 +42,7 @@ chatgpt.setup({
 	},
 
 	openai_params = {
+		model = "gpt-3.5-turbo",
 		max_tokens = 300,
 	},
 
