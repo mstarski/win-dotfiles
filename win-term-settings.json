@@ -10,9 +10,10 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+j"
         },
         {
             "command": 
@@ -24,22 +25,12 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+j"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": "paste"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
         },
         {
             "command": "unbound",
@@ -88,6 +79,15 @@
         {
             "command": "unbound",
             "keys": "ctrl+'"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
         },
         {
             "command": 
@@ -173,7 +173,7 @@
                 "adjustIndistinguishableColors": "never",
                 "antialiasingMode": "cleartype",
                 "backgroundImage": "%APPDATA%\\mstarski.win-dotfiles\\terminal-bg",
-                "backgroundImageOpacity": 0.0,
+                "backgroundImageOpacity": 0.1,
                 "bellStyle": "taskbar",
                 "closeOnExit": "graceful",
                 "colorScheme": "zenwritten_dark",
