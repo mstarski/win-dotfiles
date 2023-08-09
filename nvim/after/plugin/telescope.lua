@@ -66,7 +66,7 @@ local project_files = function()
 end
 
 -- this works as both C-n and C-S-n. Terminal cannot distinguish C-x and C-S-x operations
-vim.keymap.set("n", "<C-n>", project_files)
+vim.keymap.set("n", "<C-n>", builtin.find_files)
 vim.keymap.set("n", "<C-\\>", builtin.find_files)
 
 vim.keymap.set("n", "<leader>ps", function()
