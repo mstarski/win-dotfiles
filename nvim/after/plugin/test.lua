@@ -5,12 +5,7 @@ neotest.setup({
 		require("neotest-dotnet")({
 			dap = { justMyCode = false },
 		}),
-		require("neotest-jest")({
-			jestCommand = "npm test --",
-			cwd = function()
-				return vim.fn.getcwd()
-			end,
-		}),
+		require("neotest-jest"),
 	},
 })
 

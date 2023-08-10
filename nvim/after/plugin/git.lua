@@ -1,5 +1,7 @@
 local telescope = require("telescope.builtin")
 
+vim.api.nvim_set_keymap("n", "<leader><CR>", ":G ", { noremap = true })
+
 vim.keymap.set("n", "<leader>gs", ":vert G<CR>", { silent = true })
 
 -- Toggle branches
