@@ -2,7 +2,7 @@ local builtin = require("telescope.builtin")
 local telescope = require("telescope")
 local actions = require("telescope.actions")
 
-local prompt = " 🔍 "
+local prompt = " 📁 "
 
 telescope.setup({
 	defaults = {
@@ -21,6 +21,14 @@ telescope.setup({
 				width = 0.9,
 				height = 0.3,
 			},
+		},
+
+		results_title = false,
+		border = true,
+		borderchars = {
+			prompt = { "─", "│", " ", "│", "╭", "╮", "│", "│" },
+			results = { "─", "│", "─", "│", "├", "┤", "╯", "╰" },
+			preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 		},
 
 		path_display = function(opts, path)
@@ -43,10 +51,12 @@ telescope.setup({
 		live_grep = {
 			theme = "dropdown",
 			literal = true,
+			prompt_prefix = " 🔍 ",
 		},
 
 		lsp_references = {
 			path_display = { "tail" },
+			prompt_prefix = " 📦 ",
 		},
 	},
 })
