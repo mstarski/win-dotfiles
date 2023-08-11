@@ -43,7 +43,7 @@ WinGet MX, MinMax, A
 	return
 }
 
-#^f::
+#^p::
 RunOrActivate("firefox.exe")
 return
 
