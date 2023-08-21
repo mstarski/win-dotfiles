@@ -6,142 +6,85 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetNumLockState, AlwaysOn
 SetCapsLockState, AlwaysOff
 
-RunOrActivate(Target, WinTitle = "") {
-SplitPath, Target, TargetNameOnly
-Process, Exist, %TargetNameOnly%
-    If ErrorLevel > 0
-        PID = %ErrorLevel%
-    Else
+; ==================== Helper functions ========================
+RunOrActivate(Target, Fallback = "")
+{
+    IfWinExist, %Target%
     {
-      Run, %Target%, , , PID
+        WinActivate
     }
-    If WinTitle <>
+    else
     {
-      SetTitleMatchMode, 2
-      WinWait, %WinTitle%, , 3
-      WinActivate, %WinTitle%
-    }
-    Else
-    {
-      WinWait, ahk_pid %PID%, , 3
-      WinActivate, ahk_pid %PID%
+        If (Fallback == "") {
+          return
+        } Else {
+          Run, %Fallback% 
+        }
     }
 }
 
+ToggleMaximize() {
+WinGet MX, MinMax, A
 
-
-#^p::
-RunOrActivate("firefox.exe")
-return
-
-#^\::
-SetTitleMatchMode, 2
-if WinExist("Docker") {
-	WinActivate
-} else {
+	If (MX==1)
+	{
+		WinRestore A
+	}	
+	Else If (MX==0)
+	{
+		WinMaximize A
+	}
+	
 	return
 }
+
+; ==================== Hotkeys ========================
+Hotkey, <^<!<#<+p, browser
+Hotkey, <^<!<#<+\, docker  
+Hotkey, <^<!<#<+g, telegram  
+Hotkey, <^<!<#<+s, spotify  
+Hotkey, <^<!<#<+o, obsidian  
+Hotkey, <^<!<#<+d, discord  
+Hotkey, <^<!<#<+e, slack  
+Hotkey, <^<!<#<+Space, terminal  
 return
 
-#^g::
-RunOrActivate("D:\Telegram Desktop\Telegram.exe")
+browser:
+RunOrActivate("ahk_exe firefox.exe", "firefox.exe")
 return
 
-#^s::
-try {
-	RunOrActivate("Spotify.exe")
-} catch e {
-	RunOrActivate(A_AppData . "\Spotify\Spotify.exe")
-}
+docker:
+RunOrActivate("Docker")
 return
 
-#^o::
-RunOrActivate("C:\Users\" . A_UserName . "\AppData\Local\Obsidian\Obsidian.exe")
+telegram:
+RunOrActivate("ahk_exe Telegram") ;todo
 return
 
-#^+s::
-RunOrActivate("D:\Steam\steam.exe")
+spotify:
+RunOrActivate("ahk_exe Spotify.exe", A_AppData . "\Spotify\Spotify.exe")
 return
 
-#^d::
-RunOrActivate("C:\Users\" . A_UserName . "\AppData\Local\Discord\Update.exe --processStart Discord.exe")
+obsidian:
+RunOrActivate("ahk_exe Obsidian.exe", "C:\Users\" . A_UserName . "\AppData\Local\Obsidian\Obsidian.exe")
 return
 
-#^e::
-RunOrActivate("", "Slack")
+discord:
+RunOrActivate("ahk_exe Discord.exe", "C:\Users\" . A_UserName . "\AppData\Local\Discord\Update.exe --processStart Discord.exe")
 return
 
-#^Space::
-try {
-	RunOrActivate("WindowsTerminal.exe")
-} catch e {
-	RunOrActivate("C:\Users\" . A_UserName . "\AppData\Local\Microsoft\WindowsApps\wt.exe")
-}
+slack:
+RunOrActivate("ahk_exe Slack.exe", "C:\Users\" . A_UserName . "\AppData\Local\slack\slack.exe")
 return
 
-#^Enter::
-if WinExist("ahk_class SunAwtFrame") {
-	WinActivate
-} else {
-	run, idea
-}
+terminal:
+RunOrActivate("ahk_exe WindowsTerminal.exe", "C:\Users\" . A_UserName . "\AppData\Local\Microsoft\WindowsApps\wt.exe")
 return
 
-;CapsLock::Esc ; Remap CapsLock to Esc
-;Esc::CapsLock ; Remap Esc to CapsLock
-
-; Window controls
+; ==================== Window Controls ========================
 #q::WinClose, A ; Close a window with mod+q
-#,::WinMinimize, A ; Minimize on mod + m
-
-#m::ToggleMaximize()
-
-;Capslock + key mapping
-
-Capslock & h::
-    Send {Blind}{Left down}
-return
-
-Capslock & h up::
-    Send {Blind}{Left up}
-return
-
-Capslock & j::
-    Send {Blind}{Down down}
-return
-
-Capslock & j up::
-    Send {Blind}{Down up}
-return
-
-Capslock & k::
-    Send {Blind}{Up down}
-return
-
-Capslock & k up::
-    Send {Blind}{Up up}
-return
-
-Capslock & l::
-    Send {Blind}{Right down}
-return
-
-Capslock & l up::
-    Send {Blind}{Right up}
-return
-
-; ESC = `
-;Escape::Send, ``
-;Shift & Escape::Send, ~
-
-; Volume
-<^>!b::
-	SendInput {Volume_Up 5}
-return
-
-<^>!v::
-	SendInput {Volume_Down 5}
-return
+<^<!<#<+,::WinMinimize, A ; Minimize on mod + m
+<^<!<#<+m::ToggleMaximize()
 
 ; Changing desktops
 <^>!1::
@@ -152,6 +95,7 @@ return
     SendEvent ^#{Right}
 return
 
+; ==================== Hotstrings ========================
 ::,prt::
 SendInput,
 (
@@ -167,8 +111,4 @@ SendInput,
 
 {#}{#}{#} How to test
 )
-return
-
-<^<!<#<+::
-MsgBox, Hello World!
 return
