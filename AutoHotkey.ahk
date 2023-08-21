@@ -58,7 +58,7 @@ RunOrActivate("Docker")
 return
 
 telegram:
-RunOrActivate("ahk_exe Telegram") ;todo
+RunOrActivate("ahk_exe Telegram", "D:\Telegram Desktop\Telegram.exe") ;todo
 return
 
 spotify:
