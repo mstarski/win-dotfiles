@@ -28,20 +28,7 @@ Process, Exist, %TargetNameOnly%
     }
 }
 
-ToggleMaximize() {
-WinGet MX, MinMax, A
 
-	If (MX==1)
-	{
-		WinRestore A
-	}	
-	Else If (MX==0)
-	{
-		WinMaximize A
-	}
-	
-	return
-}
 
 #^p::
 RunOrActivate("firefox.exe")
@@ -100,12 +87,11 @@ if WinExist("ahk_class SunAwtFrame") {
 }
 return
 
-CapsLock::Esc ; Remap CapsLock to Esc
-Esc::CapsLock ; Remap Esc to CapsLock
+;CapsLock::Esc ; Remap CapsLock to Esc
+;Esc::CapsLock ; Remap Esc to CapsLock
 
 ; Window controls
 #q::WinClose, A ; Close a window with mod+q
-
 #,::WinMinimize, A ; Minimize on mod + m
 
 #m::ToggleMaximize()
@@ -145,8 +131,8 @@ Capslock & l up::
 return
 
 ; ESC = `
-Escape::Send, ``
-Shift & Escape::Send, ~
+;Escape::Send, ``
+;Shift & Escape::Send, ~
 
 ; Volume
 <^>!b::
@@ -181,4 +167,8 @@ SendInput,
 
 {#}{#}{#} How to test
 )
+return
+
+<^<!<#<+::
+MsgBox, Hello World!
 return
