@@ -82,7 +82,7 @@ RunOrActivate("ahk_exe WindowsTerminal.exe", "C:\Users\" . A_UserName . "\AppDat
 return
 
 ; ==================== Window Controls ========================
-#q::WinClose, A ; Close a window with mod+q
+<^<!<#<+q::WinClose, A ; Close a window with mod+q
 <^<!<#<+,::WinMinimize, A ; Minimize on mod + m
 <^<!<#<+m::ToggleMaximize()
 
