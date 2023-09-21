@@ -7,7 +7,6 @@ vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>", { noremap = true, silent = 
 return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
-
 	use({
 		-- also requires ripgrep for grep command to work
 		"nvim-telescope/telescope.nvim",
@@ -15,17 +14,13 @@ return require("packer").startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
-
 	use("smartpde/telescope-recent-files")
 	use("nvim-telescope/telescope-symbols.nvim")
-
 	use({ "rose-pine/neovim", as = "rose-pine" })
-
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("theprimeagen/harpoon")
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
-
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v2.x",
@@ -49,16 +44,13 @@ return require("packer").startup(function(use)
 			{ "jose-elias-alvarez/typescript.nvim" },
 		},
 	})
-
 	use("tpope/vim-surround")
 	use("tpope/vim-commentary")
 	use("sbdchd/neoformat")
-
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
-
 	use("windwp/nvim-autopairs")
 	use("ellisonleao/glow.nvim") -- markdown preview
 	use({ "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons" })
@@ -66,7 +58,6 @@ return require("packer").startup(function(use)
 	use("nvim-tree/nvim-web-devicons")
 	use("preservim/nerdcommenter")
 	use("christoomey/vim-tmux-navigator")
-	use("junegunn/limelight.vim")
 	use("b0o/schemastore.nvim")
 	use({ "nvim-tree/nvim-tree.lua" })
 	use({ "goolord/alpha-nvim" })
@@ -113,4 +104,11 @@ return require("packer").startup(function(use)
 		},
 	})
 	use({ "mattn/emmet-vim" })
+	use({
+		"antosha417/nvim-lsp-file-operations",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-tree.lua",
+		},
+	})
 end)
