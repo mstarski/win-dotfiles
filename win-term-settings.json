@@ -10,10 +10,9 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+j"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": 
@@ -25,12 +24,22 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+j"
         },
         {
             "command": "paste"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
         },
         {
             "command": "unbound",
@@ -83,15 +92,6 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
                 "action": "moveFocus",
                 "direction": "left"
             },
@@ -125,6 +125,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
+    "disableAnimations": true,
     "launchMode": "default",
     "newTabMenu": 
     [
@@ -181,7 +182,7 @@
                 "cursorShape": "filledBox",
                 "font": 
                 {
-                    "face": "ComicShannsMono Nerd Font Mono",
+                    "face": "FiraMono Nerd Font Mono",
                     "size": 13.0,
                     "weight": "medium"
                 },
@@ -482,6 +483,7 @@
         }
     ],
     "showTabsInTitlebar": false,
+    "showTerminalTitleInTitlebar": false,
     "theme": "dark",
     "themes": 
     [
