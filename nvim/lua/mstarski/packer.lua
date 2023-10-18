@@ -53,7 +53,6 @@ return require("packer").startup(function(use)
 	})
 	use("windwp/nvim-autopairs")
 	use("ellisonleao/glow.nvim") -- markdown preview
-	use({ "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons" })
 	use("phaazon/hop.nvim")
 	use("nvim-tree/nvim-web-devicons")
 	use("preservim/nerdcommenter")

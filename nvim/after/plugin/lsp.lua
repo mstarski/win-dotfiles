@@ -9,6 +9,7 @@ local my_cmp = require("modules.cmp")
 lsp.ensure_installed({ "tsserver", "lua_ls" })
 lsp.set_sign_icons({ error = "🈲", warn = "🟡", hint = "🙈", info = "🔵" })
 lsp.setup({ sources = { { name = "nvim_lsp" }, { name = "nvim_lua" } } })
+require("lsp-file-operations").setup()
 
 lsp.skip_server_setup({ "tsserver" })
 
