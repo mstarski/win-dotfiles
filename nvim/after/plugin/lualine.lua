@@ -1,7 +1,7 @@
 local lualine = require("lualine")
 
 lualine.setup({
-	theme = "tokyonight",
+	theme = "material",
 	sections = {
 		lualine_c = {
 			{

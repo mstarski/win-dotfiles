@@ -50,7 +50,7 @@ Hotkey, <^<!<#<+Space, terminal
 return
 
 browser:
-RunOrActivate("ahk_exe firefox.exe", "firefox.exe")
+RunOrActivate("ahk_exe mercury.exe", "mercury.exe")
 return
 
 docker:
