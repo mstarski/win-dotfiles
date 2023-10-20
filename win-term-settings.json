@@ -19,6 +19,13 @@
         {
             "command": 
             {
+                "action": "copy",
+                "singleLine": false
+            }
+        },
+        {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "right"
             }
@@ -32,14 +39,14 @@
             "keys": "alt+j"
         },
         {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            }
+            "command": "paste"
         },
         {
-            "command": "paste"
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            }
         },
         {
             "command": "unbound",
@@ -88,13 +95,6 @@
         {
             "command": "unbound",
             "keys": "ctrl+'"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
-            }
         },
         {
             "command": 
@@ -183,9 +183,9 @@
                 "cursorShape": "filledBox",
                 "font": 
                 {
-                    "face": "CaskaydiaCove NF",
-                    "size": 13.0,
-                    "weight": "medium"
+                    "face": "CaskaydiaCove Nerd Font Mono",
+                    "size": 14.0,
+                    "weight": "normal"
                 },
                 "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
                 "hidden": false,

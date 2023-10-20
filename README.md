@@ -23,6 +23,12 @@ Of course `python3` is needed to run this one.
 
 ## How to use?
 
+## Debloat first
+
+```powershell
+irm christitus.com/win | iex
+```
+
 ### Installation
 
 ```bash
