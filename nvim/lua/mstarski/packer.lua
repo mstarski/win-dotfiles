@@ -2,7 +2,7 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd([[packadd packer.nvim]])
 
-vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>pas", ":PackerSync<CR>", { noremap = true, silent = true })
 
 return require("packer").startup(function(use)
 	-- Packer can manage itself

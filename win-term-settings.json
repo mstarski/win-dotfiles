@@ -10,9 +10,11 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
         },
         {
             "command": 
@@ -30,16 +32,14 @@
             "keys": "alt+j"
         },
         {
-            "command": "paste"
-        },
-        {
             "command": 
             {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
+                "action": "copy",
+                "singleLine": false
+            }
+        },
+        {
+            "command": "paste"
         },
         {
             "command": "unbound",
@@ -92,6 +92,13 @@
         {
             "command": 
             {
+                "action": "splitPane",
+                "split": "down"
+            }
+        },
+        {
+            "command": 
+            {
                 "action": "moveFocus",
                 "direction": "left"
             },
@@ -104,13 +111,6 @@
                 "direction": "right"
             },
             "keys": "alt+l"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
-            }
         },
         {
             "command": 
@@ -175,6 +175,7 @@
                 "antialiasingMode": "cleartype",
                 "backgroundImage": "%APPDATA%\\mstarski.win-dotfiles\\terminal-bg",
                 "backgroundImageOpacity": 0.1,
+                "backgroundImageStretchMode": "uniformToFill",
                 "bellStyle": "taskbar",
                 "closeOnExit": "graceful",
                 "colorScheme": "zenwritten_dark",
@@ -182,7 +183,7 @@
                 "cursorShape": "filledBox",
                 "font": 
                 {
-                    "face": "FiraMono Nerd Font Mono",
+                    "face": "CaskaydiaCove NF",
                     "size": 13.0,
                     "weight": "medium"
                 },
@@ -485,49 +486,5 @@
     "showTabsInTitlebar": false,
     "showTerminalTitleInTitlebar": false,
     "theme": "dark",
-    "themes": 
-    [
-        {
-            "name": "legacyDark",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "dark",
-                "useMica": false
-            }
-        },
-        {
-            "name": "legacyLight",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "light",
-                "useMica": false
-            }
-        },
-        {
-            "name": "legacySystem",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "system",
-                "useMica": false
-            }
-        }
-    ]
+    "themes": []
 }
