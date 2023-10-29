@@ -17,6 +17,10 @@
             "keys": "alt+shift+d"
         },
         {
+            "command": "openNewTabDropdown",
+            "keys": "ctrl+shift+t"
+        },
+        {
             "command": 
             {
                 "action": "copy",
@@ -40,13 +44,6 @@
         },
         {
             "command": "paste"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
-            }
         },
         {
             "command": "unbound",
@@ -95,6 +92,17 @@
         {
             "command": "unbound",
             "keys": "ctrl+'"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+space"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            }
         },
         {
             "command": 
@@ -184,7 +192,7 @@
                 "font": 
                 {
                     "face": "CaskaydiaCove Nerd Font Mono",
-                    "size": 14.0,
+                    "size": 12.0,
                     "weight": "normal"
                 },
                 "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
