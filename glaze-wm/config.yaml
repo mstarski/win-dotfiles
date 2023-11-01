@@ -1,6 +1,6 @@
 general:
   # Whether to automatically focus windows underneath the cursor.
-  focus_follows_cursor: false
+  focus_follows_cursor: true
 
   # Whether to jump the cursor between windows focused by the WM.
   cursor_follow_focus: false
@@ -18,7 +18,7 @@ general:
   # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
   # to make no setting changes.
-  window_animations: "unchanged"
+  window_animations: "false"
 
 gaps:
   # Gap between adjacent windows.
@@ -44,7 +44,7 @@ bar:
   opacity: 1.0
   background: "#20242cc4"
   foreground: "#ffffff"
-  font_family: "UbuntuMono Nerd Font"
+  font_family: "UbuntuMono Nerd Font Mono"
   font_size: "13px"
   padding: "4px 6px"
   offset_x: "0"
@@ -62,7 +62,9 @@ bar:
   components_right:
     - type: "system tray"
       margin: "0 10px 0 0"
-      padding: "2px 5px"
+      padding: "4px 5px"
+      label_expand_text: ""
+      label_collapse_text: ""
 
     - type: "volume"
       margin: "0 10px 0 0"
