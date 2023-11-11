@@ -24,7 +24,7 @@ if [[ -f /usr/bin/zoxide ]]; then
 fi
 
 if [[ -n $MS_OH_MY_POSH ]]; then
-  eval "$(oh-my-posh init zsh --config '/home/michals/.config/posh/M365Princess.omp.json')"
+  eval "$(oh-my-posh init zsh --config $HOME/.config/win-dotfiles/posh/M365Princess.omp.json)"
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
