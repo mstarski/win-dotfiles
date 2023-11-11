@@ -2,11 +2,19 @@
 alias v="/usr/local/bin/nvim.appimage"
 alias vim="nvim"
 alias cfg="vim ~/.zshrc"
-alias cat="batcat"
-alias bat="batcat"
+
+if command -v "batcat" > /dev/null; then
+  echo 'Hiho'
+  alias cat="batcat"
+  alias bat="batcat"
+else
+  alias cat="bat"
+fi
+
 alias lcat="/usr/bin/cat"
 alias z="zoxide"
 alias ls="exa --icons -F"
 alias tf="terraform"
 alias gco="g co \$(git branch | fzf-tmux -d 15)"
 alias k="kubectl"
+alias g="git"

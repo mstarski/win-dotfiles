@@ -1,24 +1,8 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-PURE_NODE_ENABLED=0
-PURE_PROMPT_SYMBOL="$"
-ZSH_THEME="lambda-pure"
-ZSH_THEME_AWS_REGION_PREFIX="🌍 "
-ZSH_THEME_AWS_REGION_SUFFIX=""
-
-plugins=(
-	git
-	zsh-autosuggestions
-  docker
-  aws
-)
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 # This loads nvm
@@ -36,3 +20,4 @@ esac
 # Created by `pipx` on 2023-05-10 06:48:40
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/.cargo/bin"
