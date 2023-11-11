@@ -60,11 +60,11 @@ bar:
     - type: "window title"
 
   components_right:
-    - type: "system tray"
-      margin: "0 10px 0 0"
-      padding: "4px 5px"
-      label_expand_text: ""
-      label_collapse_text: ""
+    # - type: "system tray"
+    # margin: "0 10px 0 0"
+    # padding: "4px 5px"
+    # label_expand_text: ""
+    # label_collapse_text: ""
 
     - type: "volume"
       margin: "0 10px 0 0"
@@ -232,6 +232,9 @@ keybindings:
   # to start Windows Terminal and Git Bash respectively.
   - command: "exec wt"
     binding: "Alt+Enter"
+
+  - command: "exec %ProgramFiles%/Mercury/mercury.exe"
+    binding: "Alt+F"
 
   # Focus the workspace that last had focus.
   - command: "focus workspace recent"
