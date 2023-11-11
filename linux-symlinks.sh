@@ -1,6 +1,7 @@
 #!/bin/bash
 
-DOTFILES=$HOME/.config/win-dotfiles
+USER_HOME=/home/$(whoami)
+DOTFILES=$USER_HOME/.config/win-dotfiles
 
 # $1: source file
 # $2: destination file
@@ -32,6 +33,6 @@ if (( $EUID != 0 )); then
 fi
 
 create_symlink /usr/bin/batcat /usr/bin/bat
-create_symlink $DOTFILES/shell/zshrc $HOME/.zshrc
-create_symlink $DOTFILES/tmux.conf $HOME/.tmux.conf
-create_symlink $DOTFILES/nvim $HOME/.config/nvim
+create_symlink $DOTFILES/shell/zshrc $USER_HOME/.zshrc
+create_symlink $DOTFILES/tmux.conf $USER_HOME/.tmux.conf
+create_symlink $DOTFILES/nvim $USER_HOME/.config/nvim
