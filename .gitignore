@@ -1,2 +1,3 @@
 shell/secrets.zsh
 glaze-wm/errors.log
+__pycache__/
