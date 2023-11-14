@@ -1,8 +1,8 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+--packages/domain-driven-design/src/application This file can be loaded by calling `lua require('plugins')` from your init.vim
 -- Only required if you have packer configured as `opt`
 vim.cmd([[packadd packer.nvim]])
 
-vim.keymap.set("n", "<leader>pas", ":PackerSync<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>pa", ":PackerSync<CR>", { noremap = true, silent = true })
 
 return require("packer").startup(function(use)
 	-- Packer can manage itself
@@ -10,8 +10,7 @@ return require("packer").startup(function(use)
 	use({
 		-- also requires ripgrep for grep command to work
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
-		-- or                            , branch = '0.1.x',
+		tag = "0.1.4",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use("smartpde/telescope-recent-files")
@@ -73,6 +72,11 @@ return require("packer").startup(function(use)
 	use({ "github/copilot.vim" })
 	use({
 		"jackMort/ChatGPT.nvim",
+		commit = "d4aa4d9e31d620a0c01006e59f4449ffc7eb33ce",
+		config = function()
+			local config = require("mstarski.gptconfig")
+			require("chatgpt").setup(config.chatGptConfig())
+		end,
 		requires = {
 			"MunifTanjim/nui.nvim",
 			"nvim-lua/plenary.nvim",
