@@ -36,5 +36,5 @@ fi
 
 # Start tmux
 if (( $+commands[tmux] )); then
-  tmux new-session -A -s main
+  [[ ! -n $TMUX ]] && tmux new-session -A -s main
 fi
