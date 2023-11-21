@@ -7,17 +7,17 @@
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "right"
+                "direction": "left"
             },
-            "keys": "alt+l"
+            "keys": "alt+h"
         },
         {
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "left"
+                "direction": "right"
             },
-            "keys": "alt+h"
+            "keys": "alt+l"
         },
         {
             "command": "openNewTabDropdown",
@@ -28,6 +28,13 @@
             {
                 "action": "copy",
                 "singleLine": false
+            }
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
             }
         },
         {
@@ -83,13 +90,6 @@
             "keys": "ctrl+shift+space"
         },
         {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
-            }
-        },
-        {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
@@ -113,17 +113,17 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+j"
+                "action": "splitPane",
+                "split": "right"
+            }
         },
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "right"
-            }
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+j"
         },
         {
             "command": "paste"
@@ -180,7 +180,7 @@
             {
                 "bellStyle": "none",
                 "colorScheme": "One Half Dark",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -e tmux",
+                "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
                 "cursorShape": "filledBox",
                 "font": 
                 {

@@ -33,3 +33,8 @@ autoload -U +X bashcompinit && bashcompinit
 if [[ -f /usr/bin/terraform ]]; then
   complete -o nospace -C /usr/bin/terraform terraform
 fi
+
+# Start tmux
+if (( $+commands[tmux] )); then
+  tmux new-session -A -s main
+fi
