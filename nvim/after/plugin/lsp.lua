@@ -69,7 +69,7 @@ vim.diagnostic.config({ virtual_text = false })
 
 vim.keymap.set("n", "<M-e>", vim.diagnostic.open_float)
 vim.keymap.set("n", "<M-w>", vim.lsp.buf.code_action)
-vim.keymap.set("n", "<M-S-r>", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>re", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>oi", ts.actions.organizeImports)
 vim.keymap.set("n", "<leader>ru", ts.actions.removeUnused)
 vim.keymap.set("n", "<leader>am", ts.actions.addMissingImports)
