@@ -127,25 +127,15 @@ bar:
 
 workspaces:
   - name: "1"
-    keep_alive: true
   - name: "2"
-    keep_alive: true
   - name: "2"
-    keep_alive: true
   - name: "3"
-    keep_alive: true
   - name: "4"
-    keep_alive: true
   - name: "5"
-    keep_alive: true
   - name: "6"
-    keep_alive: true
   - name: "7"
-    keep_alive: true
   - name: "8"
-    keep_alive: true
   - name: "9"
-    keep_alive: true
 
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
@@ -253,7 +243,7 @@ keybindings:
   - command: "exec wt"
     binding: "Alt+Enter"
 
-  - command: "exec %ProgramFiles%/Mercury/mercury.exe"
+  - command: "exec '%ProgramFiles%/Firefox Developer Edition/firefox.exe'"
     binding: "Alt+F"
 
   # Focus the workspace that last had focus.

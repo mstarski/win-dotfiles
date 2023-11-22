@@ -48,9 +48,4 @@ function M.chatGptConfig()
 	return cfg
 end
 
-function M.setBindings(chatgpt)
-	vim.keymap.set("n", "<leader>0c", chatgpt.openChat)
-	vim.keymap.set("n", "<leader>0e", chatgpt.edit_with_instructions)
-end
-
 return M

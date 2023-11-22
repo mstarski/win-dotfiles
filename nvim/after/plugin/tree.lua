@@ -8,6 +8,14 @@ require("nvim-tree").setup({
 	on_attach = function(buffer)
 		api.config.mappings.default_on_attach(buffer)
 	end,
+
+	view = {
+		width = 50,
+	},
+
+	filters = {
+		dotfiles = true,
+	},
 })
 
 vim.keymap.set("n", "<C-b>", function()
