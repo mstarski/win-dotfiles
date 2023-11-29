@@ -4,7 +4,6 @@ alias vim="nvim"
 alias cfg="vim ~/.zshrc"
 
 if command -v "batcat" > /dev/null; then
-  echo 'Hiho'
   alias cat="batcat"
   alias bat="batcat"
 else
@@ -18,3 +17,4 @@ alias tf="terraform"
 alias gco="g co \$(git branch | fzf-tmux -d 15)"
 alias k="kubectl"
 alias g="git"
+alias la="ls -la"
