@@ -246,6 +246,9 @@ keybindings:
   - command: "exec '%ProgramFiles%/Firefox Developer Edition/firefox.exe'"
     binding: "Alt+F"
 
+  - command: "exec '%ProgramFiles%/Firefox Developer Edition/firefox.exe' -P personal"
+    binding: "Alt+Shift+F"
+
   # Focus the workspace that last had focus.
   - command: "focus workspace recent"
     binding: "Alt+Y"
