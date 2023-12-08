@@ -1,3 +1,5 @@
+export SRC="$HOME/.config/win-dotfiles/shell"
+
 export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
@@ -11,9 +13,7 @@ else
   export EDITOR='nvim'
 fi
 
-# This loads nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -f $SRC/nvm.zsh ] && source $SRC/nvm.zsh
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
