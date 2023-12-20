@@ -44,7 +44,7 @@ bar:
   opacity: 1.0
   background: "#20242cc4"
   foreground: "#ffffff"
-  font_family: "UbuntuMono Nerd Font Mono"
+  font_family: "Noto Sans"
   font_size: "13px"
   padding: "4px 6px"
   offset_x: "0"
@@ -60,11 +60,11 @@ bar:
     - type: "window title"
 
   components_right:
-    # - type: "system tray"
-    # margin: "0 10px 0 0"
-    # padding: "4px 5px"
-    # label_expand_text: ""
-    # label_collapse_text: ""
+    - type: "system tray"
+      margin: "0 10px 0 0"
+      padding: "4px 5px"
+      label_expand_text: ""
+      label_collapse_text: ""
 
     - type: "volume"
       margin: "0 10px 0 0"
@@ -153,6 +153,12 @@ window_rules:
 
   - command: "move to workspace 3"
     match_process_name: "Slack"
+
+  - command: "move to workspace 3"
+    match_title: "/(.*)Mozilla Thunderbird/"
+
+  - command: "set floating"
+    match_title: "Settings"
 
 binding_modes:
   - name: "resize"
@@ -246,6 +252,10 @@ keybindings:
   - command: "exec '%ProgramFiles%/Firefox Developer Edition/firefox.exe'"
     binding: "Alt+F"
 
+  - command: "exec '%ProgramFiles%/Mozilla Thunderbird/thunderbird.exe'"
+    binding: "Alt+Shift+M"
+
+  # Basically only usable at work
   - command: "exec '%ProgramFiles%/Firefox Developer Edition/firefox.exe' -P personal"
     binding: "Alt+Shift+F"
 
