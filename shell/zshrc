@@ -40,3 +40,7 @@ fi
 if (( $+commands[tmux] )); then
   [[ ! -n $TMUX ]] && (tmux attach || tmux)
 fi
+
+if (( $+commands[go] )); then
+  export GOPATH=$HOME/go
+fi
