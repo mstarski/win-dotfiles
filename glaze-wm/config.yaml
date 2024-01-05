@@ -117,7 +117,7 @@ bar:
     - type: "clock"
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: "hh:mm tt  ddd MMM d"
+      time_formatting: "HH:MM   ddd MMM d"
       margin: "0 5px 0 0"
 
     - type: "battery"
@@ -159,6 +159,18 @@ window_rules:
 
   - command: "set floating"
     match_title: "Settings"
+
+  - command: "set floating"
+    match_title: "WingetUI"
+
+  - command: "set floating"
+    match_title: "WingetUI"
+
+  - command: "set floating"
+    match_title: "pinentry-qt"
+
+  - command: "set floating"
+    match_process_name: "/explorer/"
 
 binding_modes:
   - name: "resize"

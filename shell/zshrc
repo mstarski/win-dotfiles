@@ -30,6 +30,11 @@ if [[ -n $MS_OH_MY_POSH ]]; then
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
+if [[ -n $MS_WSL_YUBIKEY ]]; then
+  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket) 
+  gpgconf --launch gpg-agent
+fi
+
 autoload -U +X bashcompinit && bashcompinit
 
 if [[ -f /usr/bin/terraform ]]; then
