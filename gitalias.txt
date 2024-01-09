@@ -40,6 +40,7 @@
     c = commit
     ca = commit --amend
     co = checkout
+    cp = cherry-pick
     com = checkout origin/HEAD
     cob = checkout -b
     del = branch -D
