@@ -61,3 +61,5 @@
     whatis = show -s --pretty='tformat::%h (%s, %ad)' --date=short
     howmany = "!sh -c 'git log -a --pretty=oneline | wc -l'"
     howmanybywhom = shortlog -sn
+    accept-ours = "!f() { git checkout --ours -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
+    accept-theirs = "!f() { git checkout --theirs -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
