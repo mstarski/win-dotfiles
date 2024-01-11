@@ -114,11 +114,11 @@ bar:
     # label_thunderstorm: "⚡ {temperature_celsius}°C"
     # label_cloud: "☁️ {temperature_celsius}°C"
 
-    - type: "clock"
-      # Documentation on formatting date/time string:
-      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: "HH:MM   ddd MMM d"
-      margin: "0 5px 0 0"
+    # - type: "clock"
+    # # Documentation on formatting date/time string:
+    # # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+    # time_formatting: "HH:MM   ddd MMM d"
+    # margin: "0 5px 0 0"
 
     - type: "battery"
       label_draining: "🔋 {battery_level}%"
