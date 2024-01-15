@@ -10,7 +10,7 @@ general:
   toggle_workspace_on_refocus: true
 
   # Whether to show floating windows as always on top.
-  show_floating_on_top: false
+  show_floating_on_top: true
 
   # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
   floating_window_move_amount: "5%"
@@ -22,10 +22,10 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "5px"
+  inner_gap: "16px"
 
   # Gap between windows and the screen edge.
-  outer_gap: "5px"
+  outer_gap: "16px"
 
 # Highlight active/inactive windows with a colored border.
 # ** Exclusive to Windows 11 due to API limitations.
@@ -246,11 +246,11 @@ keybindings:
 
   # Close focused window.
   - command: "close"
-    binding: "Alt+Shift+Q"
+    binding: "Alt+Shift+C"
 
   # Kill GlazeWM process safely.
-  - command: "exit wm"
-    binding: "Alt+Shift+E"
+  # - command: "exit wm"
+  # binding: "Alt+Shift+E"
 
   # Re-evaluate configuration file.
   - command: "reload config"
