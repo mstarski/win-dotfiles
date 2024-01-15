@@ -19,3 +19,9 @@ function _ranger() {
         exit
     fi
 }
+
+function gpgagentr () {
+  gpg-connect-agent killagent /bye
+  gpg-connect-agent updatestartuptty /bye
+  gpg-connect-agent /bye
+}
