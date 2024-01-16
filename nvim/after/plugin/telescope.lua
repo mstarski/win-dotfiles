@@ -31,7 +31,7 @@ telescope.setup({
 			preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 		},
 
-		path_display = function(opts, path)
+		path_display = function(_opts, path)
 			local tail = require("telescope.utils").path_tail(path)
 			return string.format("%s (%s)", tail, path)
 		end,
@@ -46,6 +46,7 @@ telescope.setup({
 	pickers = {
 		find_files = {
 			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+			theme = "ivy",
 		},
 
 		live_grep = {
@@ -64,7 +65,7 @@ telescope.setup({
 telescope.load_extension("recent_files")
 telescope.load_extension("dap")
 
-local project_files = function()
+local _project_files = function()
 	local opts = { hidden = true } -- define here if you want to define something
 
 	vim.fn.system("git rev-parse --is-inside-work-tree")
@@ -107,5 +108,5 @@ end)
 
 -- Emoji
 vim.keymap.set("n", "<leader>;", function()
-	builtin.symbols({ sources = { "emoji", "gitmoji" } })
+	builtin.symbols({ sources = { "emoji" } })
 end)
