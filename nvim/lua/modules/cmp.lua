@@ -24,6 +24,7 @@ function _M.setup_cmp()
 			{ name = "nvim_lsp" },
 			{ name = "nvim_lua" },
 			{ name = "path" },
+			{ name = "gitmoji" },
 			{ name = "buffer", keyword_length = 3 },
 			{ name = "luasnip", keyword_length = 2 },
 		},
