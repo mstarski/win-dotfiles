@@ -15,6 +15,7 @@ lsp.skip_server_setup({ "tsserver" })
 
 lsp.on_attach(function(_, bufnr)
 	lsp.default_keymaps({ buffer = bufnr })
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 end)
 
 -- (Optional) Configure lua language server for neovim
