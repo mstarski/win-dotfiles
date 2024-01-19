@@ -106,7 +106,7 @@ vim.keymap.set("n", "gd", function()
 	builtin.lsp_definitions()
 end)
 
--- Emoji
-vim.keymap.set("n", "<leader>;", function()
+-- Emoji (ctrl + backspace)
+vim.keymap.set("n", "<C-H>", function()
 	builtin.symbols({ sources = { "emoji" } })
 end)
