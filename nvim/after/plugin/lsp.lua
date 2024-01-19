@@ -66,7 +66,7 @@ lspconfig.omnisharp.setup({
 	},
 })
 
-vim.diagnostic.config({ virtual_text = false })
+vim.diagnostic.config({ virtual_text = true })
 
 vim.keymap.set("n", "<M-e>", vim.diagnostic.open_float)
 vim.keymap.set("n", "<M-w>", vim.lsp.buf.code_action)
