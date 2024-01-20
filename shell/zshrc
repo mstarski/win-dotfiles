@@ -34,6 +34,8 @@ if [[ -n $MS_WSL_YUBIKEY ]]; then
   export GPG_TTY="$(tty)"
   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   gpgconf --launch gpg-agent
+
+  2>/dev/null 1>&2 gpgagentr
 fi
 
 autoload -U +X bashcompinit && bashcompinit
@@ -43,9 +45,9 @@ if [[ -f /usr/bin/terraform ]]; then
 fi
 
 # Start tmux
-if (( $+commands[tmux] )); then
-  [[ ! -n $TMUX ]] && (tmux attach || tmux)
-fi
+# if (( $+commands[tmux] )); then
+  # [[ ! -n $TMUX ]] && (tmux attach || tmux)
+# fi
 
 if (( $+commands[go] )); then
   export GOPATH=$HOME/go
