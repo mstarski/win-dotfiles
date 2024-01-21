@@ -59,6 +59,18 @@
 -- vim.cmd("colorscheme rose-pine")
 --
 -- vim.cmd("colorscheme darcula")
+--
+require("gruvbox").setup({
+	italic = {
+		strings = false,
+		emphasis = false,
+		comments = false,
+		operators = false,
+		fold = false,
+	},
+	contrast = "hard",
+	transparent_mode = true,
+})
 
 vim.cmd("colorscheme gruvbox")
 

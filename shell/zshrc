@@ -44,11 +44,11 @@ if [[ -f /usr/bin/terraform ]]; then
   complete -o nospace -C /usr/bin/terraform terraform
 fi
 
-# Start tmux
-# if (( $+commands[tmux] )); then
-  # [[ ! -n $TMUX ]] && (tmux attach || tmux)
-# fi
+if (( $+commands[tmux] )); then
+  [[ ! -n $TMUX ]] && (tmux attach || tmux new-session -s $(whoami))
+fi
 
 if (( $+commands[go] )); then
   export GOPATH=$HOME/go
+  export PATH=$PATH:$GOPATH/bin
 fi
