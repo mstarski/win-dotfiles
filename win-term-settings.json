@@ -184,7 +184,8 @@
                 "cursorShape": "filledBox",
                 "font": 
                 {
-                    "face": "JetBrainsMono NF"
+                    "face": "SFMono Nerd Font",
+                    "size": 14.0
                 },
                 "guid": "{190101b4-7fde-5219-90b2-0947ed51033f}",
                 "hidden": false,

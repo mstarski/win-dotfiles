@@ -19,7 +19,7 @@ function M.chatGptConfig()
 		popup_layout = {
 			default = "center",
 			center = {
-				width = "60%",
+				width = "90%",
 				height = "90%",
 			},
 		},
@@ -37,11 +37,15 @@ function M.chatGptConfig()
 
 		openai_params = {
 			model = "gpt-4-1106-preview",
-			max_tokens = 300,
+			max_tokens = 1000,
+			temperature = 0.6,
+			top_p = 0.7,
 		},
 
 		openai_edit_params = {
 			model = "gpt-4-1106-preview",
+			temperature = 0.2,
+			top_p = 0.1,
 		},
 	}
 
