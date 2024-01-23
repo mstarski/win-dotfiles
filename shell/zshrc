@@ -1,5 +1,6 @@
 setopt auto_cd
 
+
 export SRC="$HOME/.config/win-dotfiles/shell"
 
 [ -f $SRC/common.zsh ] && source $SRC/common.zsh
@@ -30,8 +31,9 @@ if [[ -n $MS_OH_MY_POSH ]]; then
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
+export GPG_TTY="$(tty)"
+
 if [[ -n $MS_WSL_YUBIKEY ]]; then
-  export GPG_TTY="$(tty)"
   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   gpgconf --launch gpg-agent
 
