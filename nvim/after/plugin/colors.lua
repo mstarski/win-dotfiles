@@ -1,3 +1,5 @@
+-- ********* ROSEPINE *********
+--
 -- require("rose-pine").setup({
 -- --- @usage 'auto'|'main'|'moon'|'dawn'
 -- variant = "auto",
@@ -57,22 +59,33 @@
 
 -- -- Set colorscheme after options
 -- vim.cmd("colorscheme rose-pine")
---
+
+-- ********* DARCULA *********
 -- vim.cmd("colorscheme darcula")
+
+-- ********* GRUVBOX *********
+-- require("gruvbox").setup({
+-- italic = {
+-- strings = false,
+-- emphasis = false,
+-- comments = false,
+-- operators = false,
+-- fold = false,
+-- },
+-- contrast = "hard",
+-- transparent_mode = true,
+-- })
 --
-require("gruvbox").setup({
-	italic = {
-		strings = false,
-		emphasis = false,
-		comments = false,
-		operators = false,
-		fold = false,
-	},
-	contrast = "hard",
-	transparent_mode = true,
+-- vim.cmd("colorscheme gruvbox")
+
+-- ********* CATPUCCIN *********
+require("catppuccin").setup({
+	flavour = "macchiato",
+	no_italic = true,
+	no_underline = true,
 })
 
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme catppuccin")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
