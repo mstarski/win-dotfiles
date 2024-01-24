@@ -23,8 +23,9 @@ require("lazy").setup({
 		"smartpde/telescope-recent-files",
 		"nvim-telescope/telescope-symbols.nvim",
 		-- { "rose-pine/neovim", name = "rose-pine", priority = 1000 },
-		{ "ellisonleao/gruvbox.nvim", priority = 1000 },
+		-- { "ellisonleao/gruvbox.nvim", priority = 1000 },
 		-- { "doums/darcula", name = "darcula", priority = 1000 },
+		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 		"nvim-treesitter/nvim-treesitter",
 		"theprimeagen/harpoon",
 		"mbbill/undotree",
@@ -74,7 +75,7 @@ require("lazy").setup({
 		{
 			"jackMort/ChatGPT.nvim",
 			config = function()
-				local config = require("mstarski.gptconfig")
+				local config = require("modules.gptconfig")
 				require("chatgpt").setup(config.chatGptConfig())
 			end,
 			dependencies = {
@@ -85,19 +86,6 @@ require("lazy").setup({
 		},
 		{ "stevearc/resession.nvim" },
 		{ "norcalli/nvim-colorizer.lua" },
-		{
-			"mfussenegger/nvim-dap",
-			dependencies = {
-				{ "rcarriga/nvim-dap-ui" },
-				{ "nvim-telescope/telescope-dap.nvim" },
-				{ "mxsdev/nvim-dap-vscode-js", module = { "dap-vscode-js" } },
-				{
-					"microsoft/vscode-js-debug",
-					lazy = true,
-					build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
-				},
-			},
-		},
 		{
 			"nvim-neotest/neotest",
 			dependencies = {
