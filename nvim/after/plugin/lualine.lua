@@ -3,11 +3,22 @@ local lualine = require("lualine")
 lualine.setup({
 	theme = "material",
 	sections = {
+		lualine_a = {
+			"mode",
+		},
+		lualine_b = {
+			{
+				"branch",
+				icon = "",
+			},
+		},
 		lualine_c = {
 			{
 				"filename",
 				path = 1,
 			},
+			"buffers",
+			"diagnostics",
 		},
 		lualine_x = {
 			{

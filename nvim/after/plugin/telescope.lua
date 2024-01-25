@@ -79,9 +79,9 @@ end
 vim.keymap.set("n", "<C-n>", builtin.find_files)
 vim.keymap.set("n", "<C-\\>", builtin.find_files)
 
-vim.keymap.set("n", "<leader>ps", function()
-	builtin.live_grep()
-end)
+-- vim.keymap.set("n", "<leader>ps", function()
+-- builtin.live_grep()
+-- end)
 
 vim.keymap.set("", "<C-s>", function()
 	builtin.lsp_dynamic_workspace_symbols()
