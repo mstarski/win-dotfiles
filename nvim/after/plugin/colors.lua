@@ -82,7 +82,6 @@
 require("catppuccin").setup({
 	flavour = "macchiato",
 	no_italic = true,
-	no_underline = true,
 })
 
 vim.cmd("colorscheme catppuccin")
