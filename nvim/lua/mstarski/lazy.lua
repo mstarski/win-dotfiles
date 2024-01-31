@@ -102,5 +102,13 @@ require("lazy").setup({
 				"nvim-lua/plenary.nvim",
 			},
 		},
+		{
+			"Dynge/gitmoji.nvim",
+			dependencies = {
+				"hrsh7th/nvim-cmp",
+			},
+			opts = {},
+			ft = "gitcommit",
+		},
 	},
 })

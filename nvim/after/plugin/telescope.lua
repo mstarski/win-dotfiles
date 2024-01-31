@@ -18,8 +18,8 @@ telescope.setup({
 		layout_config = {
 			center = {
 				preview_cutoff = 60,
-				width = 0.9,
-				height = 0.3,
+				width = 0.6,
+				height = 0.4,
 			},
 		},
 
@@ -40,13 +40,15 @@ telescope.setup({
 	extensions = {
 		recent_files = {
 			only_cwd = true,
+			previewer = false,
 		},
 	},
 
 	pickers = {
 		find_files = {
 			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-			theme = "ivy",
+			theme = "dropdown",
+			previewer = false,
 		},
 
 		live_grep = {
