@@ -1,3 +1,4 @@
 shell/secrets.zsh
 glaze-wm/errors.log
 pyutils/__pycache__
+nvim/lua/mstarski/env.lua

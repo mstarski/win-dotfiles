@@ -1,3 +1,5 @@
+local env = require("mstarski.env")
+local utils = require("mstarski.utils")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
@@ -22,9 +24,6 @@ require("lazy").setup({
 		},
 		{ "smartpde/telescope-recent-files" },
 		{ "nvim-telescope/telescope-symbols.nvim" },
-		-- { "rose-pine/neovim", name = "rose-pine", priority = 1000 },
-		-- { "ellisonleao/gruvbox.nvim", priority = 1000 },
-		-- { "doums/darcula", name = "darcula", priority = 1000 },
 		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 		{ "nvim-treesitter/nvim-treesitter" },
 		{ "theprimeagen/harpoon" },
@@ -71,9 +70,11 @@ require("lazy").setup({
 			"folke/noice.nvim",
 			dependencies = { "MunifTanjim/nui.nvim" },
 		},
-		{ "github/copilot.vim" },
+		{ "github/copilot.vim", cond = env.aiCompletion == "copilot" },
+		{ "codota/tabnine-nvim", build = "./dl_binaries.sh", cond = env.aiCompletion == "tabnine" },
 		{
 			"jackMort/ChatGPT.nvim",
+			cond = utils.file_exists("/.secrets/openai"),
 			config = function()
 				local config = require("modules.gptconfig")
 				require("chatgpt").setup(config.chatGptConfig())
