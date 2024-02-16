@@ -1,6 +1,5 @@
 setopt auto_cd
 
-
 export SRC="$HOME/.config/win-dotfiles/shell"
 
 [ -f $SRC/common.zsh ] && source $SRC/common.zsh

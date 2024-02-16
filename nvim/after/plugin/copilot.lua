@@ -1,9 +1,13 @@
-vim.cmd([[ imap <silent><script><expr> <Right> copilot#Accept("\<CR>") ]])
+local env = require("mstarski.env")
 
-vim.g.copilot_node_command = os.getenv("HOME") .. "/.nvm/versions/node/v20.9.0/bin/node"
-vim.g.copilot_no_tab_map = true
+if env.aiCompletion == "copilot" then
+	vim.cmd([[ imap <silent><script><expr> <Right> copilot#Accept("\<CR>") ]])
 
-vim.api.nvim_set_var("copilot_filetypes", {
-	["dap-repl"] = false,
-	["dapui_watches"] = false,
-})
+	vim.g.copilot_node_command = os.getenv("HOME") .. "/.nvm/versions/node/v20.9.0/bin/node"
+	vim.g.copilot_no_tab_map = true
+
+	vim.api.nvim_set_var("copilot_filetypes", {
+		["dap-repl"] = false,
+		["dapui_watches"] = false,
+	})
+end
