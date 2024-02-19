@@ -17,7 +17,6 @@ lualine.setup({
 				"filename",
 				path = 1,
 			},
-			"buffers",
 			"diagnostics",
 		},
 		lualine_x = {
@@ -26,6 +25,7 @@ lualine.setup({
 				cond = require("noice").api.statusline.mode.has,
 				color = { fg = "#ff9e64" },
 			},
+			"tabnine",
 		},
 	},
 })
