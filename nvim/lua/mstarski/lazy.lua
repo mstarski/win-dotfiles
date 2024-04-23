@@ -26,7 +26,7 @@ require("lazy").setup({
 		{ "nvim-telescope/telescope-symbols.nvim" },
 		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 		{ "nvim-treesitter/nvim-treesitter" },
-		{ "theprimeagen/harpoon" },
+		-- { "theprimeagen/harpoon" },
 		{ "mbbill/undotree" },
 		{ "tpope/vim-fugitive" },
 		{
@@ -43,12 +43,11 @@ require("lazy").setup({
 				{ "hrsh7th/cmp-nvim-lsp" },
 				{ "hrsh7th/cmp-nvim-lua" },
 				{ "L3MON4D3/LuaSnip" },
-				{ "rafamadriz/friendly-snippets" },
+				-- { "rafamadriz/friendly-snippets" },
 				{ "jose-elias-alvarez/typescript.nvim" },
 			},
 		},
 		{ "tpope/vim-surround" },
-		{ "tpope/vim-commentary" },
 		{ "sbdchd/neoformat" },
 		{
 			"nvim-lualine/lualine.nvim",
@@ -97,12 +96,6 @@ require("lazy").setup({
 			},
 		},
 		{ "mattn/emmet-vim" },
-		{
-			"nvim-pack/nvim-spectre",
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-			},
-		},
 		{
 			"Dynge/gitmoji.nvim",
 			dependencies = {
