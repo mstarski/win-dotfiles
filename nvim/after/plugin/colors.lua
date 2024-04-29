@@ -80,7 +80,7 @@
 
 -- ********* CATPUCCIN *********
 require("catppuccin").setup({
-	flavour = "macchiato",
+	flavour = "latte",
 	no_italic = true,
 })
 
