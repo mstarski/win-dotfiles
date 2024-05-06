@@ -178,10 +178,10 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "backgroundImage": "C:\\Users\\michals\\Pictures\\wallhaven-963988.png",
-                "backgroundImageOpacity": 0.1,
+                "backgroundImage": "desktopWallpaper",
+                "backgroundImageOpacity": 0.0,
                 "bellStyle": "none",
-                "colorScheme": "One Half Light",
+                "colorScheme": "Catppuccin Macchiato",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
                 "cursorShape": "filledBox",
                 "font": 

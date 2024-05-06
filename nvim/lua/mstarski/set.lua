@@ -41,3 +41,5 @@ vim.cmd([[set shortmess+=FW]])
 
 -- Global statusline
 vim.opt.laststatus = 3
+
+vim.opt.cursorline = true
