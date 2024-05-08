@@ -79,12 +79,35 @@
 -- vim.cmd("colorscheme gruvbox")
 
 -- ********* CATPUCCIN *********
-require("catppuccin").setup({
-	flavour = "macchiato",
-	no_italic = true,
+-- require("catppuccin").setup({
+-- flavour = "macchiato",
+-- no_italic = true,
+-- })
+
+-- vim.cmd("colorscheme catppuccin")
+
+-- ********* CODE DARK *********
+local c = require("vscode.colors").get_colors()
+require("vscode").setup({
+	-- Alternatively set style in setup
+	-- style = 'light'
+
+	transparent = true,
+	italic_comments = true,
+	underline_links = true,
+	disable_nvimtree_bg = true,
+
+	color_overrides = {
+		vscLineNumber = "#FFFFFF",
+	},
+
+	group_overrides = {
+		Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
+	},
 })
 
-vim.cmd("colorscheme catppuccin")
+require("vscode").load()
+-- vim.cmd("colorscheme vscode")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

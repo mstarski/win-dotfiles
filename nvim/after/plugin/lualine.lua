@@ -1,7 +1,7 @@
 local lualine = require("lualine")
 
 lualine.setup({
-	theme = "material",
+	theme = "vscode",
 	sections = {
 		lualine_a = {
 			"mode",

@@ -178,15 +178,18 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
+                "antialiasingMode": "grayscale",
                 "backgroundImage": "desktopWallpaper",
                 "backgroundImageOpacity": 0.0,
                 "bellStyle": "none",
-                "colorScheme": "Catppuccin Macchiato",
+                "colorScheme": "VS Code",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
                 "cursorShape": "filledBox",
+                "experimental.retroTerminalEffect": false,
                 "font": 
                 {
-                    "face": "BlexMono Nerd Font",
+                    "cellHeight": "1.2",
+                    "face": "CaskaydiaCove Nerd Font Mono",
                     "size": 13.0,
                     "weight": "medium"
                 },
@@ -198,7 +201,8 @@
                 "padding": "0",
                 "scrollbarState": "hidden",
                 "source": "Windows.Terminal.Wsl",
-                "useAcrylic": false
+                "useAcrylic": false,
+                "useAtlasEngine": true
             }
         ]
     },
@@ -456,6 +460,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#A2734C"
+        },
+        {
+            "background": "#1E1E1E",
+            "black": "#1E1E1E",
+            "blue": "#569CD6",
+            "brightBlack": "#545454",
+            "brightBlue": "#569CD6",
+            "brightCyan": "#56B6C2",
+            "brightGreen": "#6A9955",
+            "brightPurple": "#C586C0",
+            "brightRed": "#F44747",
+            "brightWhite": "#D4D4D4",
+            "brightYellow": "#DCDCAA",
+            "cursorColor": "#AEAFAD",
+            "cyan": "#56B6C2",
+            "foreground": "#D4D4D4",
+            "green": "#6A9955",
+            "name": "VS Code",
+            "purple": "#C586C0",
+            "red": "#F44747",
+            "selectionBackground": "#264F78",
+            "white": "#D4D4D4",
+            "yellow": "#DCDCAA"
         },
         {
             "background": "#000000",

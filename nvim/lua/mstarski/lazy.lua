@@ -24,9 +24,9 @@ require("lazy").setup({
 		},
 		{ "smartpde/telescope-recent-files" },
 		{ "nvim-telescope/telescope-symbols.nvim" },
-		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+		-- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+		{ "Mofiqul/vscode.nvim", priority = 1000 },
 		{ "nvim-treesitter/nvim-treesitter" },
-		-- { "theprimeagen/harpoon" },
 		{ "mbbill/undotree" },
 		{ "tpope/vim-fugitive" },
 		{
@@ -43,7 +43,6 @@ require("lazy").setup({
 				{ "hrsh7th/cmp-nvim-lsp" },
 				{ "hrsh7th/cmp-nvim-lua" },
 				{ "L3MON4D3/LuaSnip" },
-				-- { "rafamadriz/friendly-snippets" },
 				{ "jose-elias-alvarez/typescript.nvim" },
 			},
 		},
@@ -72,24 +71,22 @@ require("lazy").setup({
 		{ "github/copilot.vim", cond = env.aiCompletion == "copilot" },
 		{ "codota/tabnine-nvim", build = "./dl_binaries.sh", cond = env.aiCompletion == "tabnine" },
 		{
-			"jackMort/ChatGPT.nvim",
-			cond = utils.file_exists("/.secrets/openai"),
-			config = function()
-				local config = require("modules.gptconfig")
-				require("chatgpt").setup(config.chatGptConfig())
-			end,
+			"CopilotC-Nvim/CopilotChat.nvim",
+			branch = "canary",
 			dependencies = {
-				"MunifTanjim/nui.nvim",
-				"nvim-lua/plenary.nvim",
-				"nvim-telescope/telescope.nvim",
+				{ "github/copilot.vim" },
+				{ "nvim-lua/plenary.nvim" },
 			},
+			cond = env.aiCompletion == "copilot",
 		},
 		{ "stevearc/resession.nvim" },
 		{ "norcalli/nvim-colorizer.lua" },
 		{
 			"nvim-neotest/neotest",
 			dependencies = {
+				"nvim-neotest/nvim-nio",
 				"nvim-lua/plenary.nvim",
+				"antoinemadec/FixCursorHold.nvim",
 				"nvim-treesitter/nvim-treesitter",
 				"Issafalcon/neotest-dotnet",
 				"nvim-neotest/neotest-jest",

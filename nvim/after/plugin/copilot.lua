@@ -10,4 +10,6 @@ if env.aiCompletion == "copilot" then
 		["dap-repl"] = false,
 		["dapui_watches"] = false,
 	})
+
+	require("CopilotChat").setup()
 end
