@@ -1,5 +1,8 @@
 import subprocess
+import os.path
 
+def hasZsh():
+    return os.path.isfile('/bin/zsh')
 
 def cmd(command, **kwargs):
     return subprocess.run(

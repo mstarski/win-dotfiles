@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USER_HOME=/home/$(whoami)
+USER_HOME=/home/$(logname)
 DOTFILES=$USER_HOME/.config/win-dotfiles
 
 # $1: source file

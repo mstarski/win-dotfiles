@@ -4,7 +4,8 @@
   "dependencies": [
     {
       "name": "neovim",
-      "cmd": "nvim --version"
+      "cmd": "nvim --version",
+      "help": "https://github.com/neovim/neovim"
     },
     {
       "name": "git",
@@ -12,7 +13,8 @@
     },
     {
       "name": "tmux",
-      "cmd": "tmux -V"
+      "cmd": "tmux -V",
+      "help": "https://github.com/tmux/tmux"
     },
     {
       "name": "zsh",
@@ -20,15 +22,18 @@
     },
     {
       "name": "batcat",
-      "cmd": "batcat --version"
+      "cmd": "batcat --version || bat --version",
+      "help": "https://github.com/sharkdp/bat"
     },
     {
       "name": "fzf",
-      "cmd": "fzf --version"
+      "cmd": "fzf --version",
+      "help": "https://github.com/junegunn/fzf"
     },
     {
       "name": "ranger",
-      "cmd": "ranger --version"
+      "cmd": "ranger --version",
+      "help": "https://github.com/ranger/ranger"
     },
     {
       "name": "pnpm",
@@ -36,19 +41,23 @@
     },
     {
       "name": "nvm",
-      "cmd": "nvm --version"
+      "cmd": "nvm --version",
+      "help": "https://github.com/nvm-sh/nvm"
     },
     {
       "name": "trash-cli",
-      "cmd": "trash --version"
+      "cmd": "trash --version",
+      "help": "https://github.com/andreafrancia/trash-cli"
     },
     {
       "name": "pipx",
-      "cmd": "pipx --version"
+      "cmd": "pipx --version",
+      "help": "https://github.com/pypa/pipx"
     },
     {
       "name": "exa",
-      "cmd": "exa --version"
+      "cmd": "exa --version",
+      "help": "https://github.com/ogham/exa"
     },
     {
       "name": "gpg",
@@ -60,15 +69,18 @@
     },
     {
       "name": "zoxide",
-      "cmd": "zoxide --version"
+      "cmd": "zoxide --version",
+      "help": "https://github.com/ajeetdsouza/zoxide"
     },
     {
       "name": "bitwarden cli",
-      "cmd": "bw --version"
+      "cmd": "bw --version",
+      "help": "https://bitwarden.com/blog/how-to-install-and-use-the-bitwarden-command-line-tool"
     },
     {
       "name": "ag",
-      "cmd": "ag --version"
+      "cmd": "ag --version",
+      "help": "https://github.com/ggreer/the_silver_searcher"
     }
   ]
 }
