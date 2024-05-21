@@ -1,5 +1,4 @@
 local env = require("mstarski.env")
-local utils = require("mstarski.utils")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
@@ -29,6 +28,12 @@ require("lazy").setup({
 		{ "nvim-treesitter/nvim-treesitter" },
 		{ "mbbill/undotree" },
 		{ "tpope/vim-fugitive" },
+		{
+			"L3MON4D3/LuaSnip",
+			version = "v2.*",
+			build = "make install_jsregexp",
+			dependencies = { "rafamadriz/friendly-snippets" },
+		},
 		{
 			"VonHeikemen/lsp-zero.nvim",
 			branch = "v2.x",
