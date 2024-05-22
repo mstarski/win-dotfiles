@@ -35,6 +35,11 @@ require("lazy").setup({
 			dependencies = { "rafamadriz/friendly-snippets" },
 		},
 		{
+			"m4xshen/hardtime.nvim",
+			dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+			opts = {},
+		},
+		{
 			"VonHeikemen/lsp-zero.nvim",
 			branch = "v2.x",
 			dependencies = {
