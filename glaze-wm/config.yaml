@@ -268,7 +268,7 @@ keybindings:
     binding: "Alt+Shift+M"
 
   # Basically only usable at work
-  - command: 'exec ''chrome.exe'' --args --profile-directory="Profile 2"'
+  - command: 'exec brave.exe'
     binding: "Alt+Shift+F"
 
   # Focus the workspace that last had focus.
