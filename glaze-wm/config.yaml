@@ -154,7 +154,7 @@ window_rules:
   - command: "move to workspace 3"
     match_process_name: "Slack"
 
-  - command: "move to workspace 3"
+  - command: "move to workspace 4"
     match_title: "/(.*)Mozilla Thunderbird/"
 
   - command: "set floating"
