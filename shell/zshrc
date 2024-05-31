@@ -25,8 +25,8 @@ bindkey -s '^O' 'ranger-cd\n'
 bindkey -s '^P' 'my_fzf\n'
 
 # Init plugins
-if [[ -f /usr/bin/zoxide ]]; then
-  eval "$(zoxide init zsh)"
+if (( $+commands[zoxide] )); then
+  eval "$(zoxide init zsh --cmd cd)"
 fi
 
 if [[ -n $MS_OH_MY_POSH ]]; then

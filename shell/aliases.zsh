@@ -11,7 +11,6 @@ else
 fi
 
 alias lcat="/usr/bin/cat"
-alias z="zoxide"
 alias ls="exa --icons -F"
 alias tf="terraform"
 alias gco="g co \$(git branch | fzf-tmux -d 15)"
