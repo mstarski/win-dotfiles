@@ -39,7 +39,7 @@ vim.opt.ttimeoutlen = 5
 vim.cmd([[set formatoptions-=cro]])
 vim.cmd([[set shortmess+=FW]])
 
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 
 -- Global statusline
 vim.opt.laststatus = 3

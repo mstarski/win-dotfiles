@@ -11,15 +11,15 @@ if [ -d $HOME/.zsh/pure ]; then
 fi
 
 PURE_NODE_ENABLED=0
+PURE_GIT_PULL=0
 # PURE_PROMPT_SYMBOL="λ"
-PURE_PROMPT_SYMBOL="$"
+PURE_PROMPT_SYMBOL="🚀"
 ZSH_THEME_AWS_REGION_PREFIX="🌍 "
 ZSH_THEME_AWS_REGION_SUFFIX=""
 
 plugins=(
 	git
 	zsh-autosuggestions
-  docker
   aws
 )
 

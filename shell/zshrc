@@ -25,6 +25,14 @@ bindkey -s '^O' 'ranger-cd\n'
 bindkey -s '^P' 'my_fzf\n'
 
 # Init plugins
+
+if [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+  echo "zsh-syntax-highlighting not found"
+  echo "https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md"
+fi
+
 if (( $+commands[zoxide] )); then
   eval "$(zoxide init zsh --cmd cd)"
 fi
@@ -49,11 +57,11 @@ if [[ -f /usr/bin/terraform ]]; then
   complete -o nospace -C /usr/bin/terraform terraform
 fi
 
-if (( $+commands[tmux] )); then
-  [[ ! -n $TMUX ]] && (tmux attach || tmux new-session -s $(whoami))
-fi
-
 if (( $+commands[go] )); then
   export GOPATH=$HOME/go
   export PATH=$PATH:$GOPATH/bin
+fi
+
+if (( $+commands[tmux] )); then
+  [[ ! -n $TMUX ]] && (tmux attach || tmux new-session -s $(whoami))
 fi

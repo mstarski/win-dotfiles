@@ -1,6 +1,7 @@
 {
-  "secrets": ["openai"],
-
+  "secrets": [
+    "openai"
+  ],
   "dependencies": [
     {
       "name": "neovim",

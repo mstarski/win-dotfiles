@@ -135,6 +135,7 @@
     "defaultProfile": "{190101b4-7fde-5219-90b2-0947ed51033f}",
     "disableAnimations": true,
     "launchMode": "default",
+    "minimizeToNotificationArea": false,
     "newTabMenu": 
     [
         {
@@ -147,7 +148,8 @@
         {
             "colorScheme": "Tango Dark",
             "opacity": 76,
-            "useAcrylic": true
+            "useAcrylic": true,
+            "useAtlasEngine": true
         },
         "list": 
         [
@@ -182,16 +184,16 @@
                 "backgroundImage": "desktopWallpaper",
                 "backgroundImageOpacity": 0.0,
                 "bellStyle": "none",
-                "colorScheme": "VS Code",
+                "colorScheme": "Catppuccin Macchiato",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
                 "cursorShape": "filledBox",
                 "experimental.retroTerminalEffect": false,
                 "font": 
                 {
-                    "cellHeight": "1.2",
-                    "face": "NotoMono Nerd Font Mono",
-                    "size": 13.0,
-                    "weight": "medium"
+                    "cellHeight": "1.3",
+                    "face": "MesloLGSDZ Nerd Font Mono",
+                    "size": 14.0,
+                    "weight": "normal"
                 },
                 "guid": "{190101b4-7fde-5219-90b2-0947ed51033f}",
                 "hidden": false,
@@ -202,7 +204,7 @@
                 "scrollbarState": "hidden",
                 "source": "Windows.Terminal.Wsl",
                 "useAcrylic": false,
-                "useAtlasEngine": true
+                "useAtlasEngine": false
             }
         ]
     },
@@ -534,5 +536,7 @@
     "showTabsInTitlebar": false,
     "showTerminalTitleInTitlebar": false,
     "theme": "dark",
-    "themes": []
+    "themes": [],
+    "useAcrylicInTabRow": false,
+    "windowingBehavior": "useAnyExisting"
 }
