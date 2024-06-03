@@ -1,5 +1,5 @@
 # Aliases
-alias v="/usr/local/bin/nvim.appimage"
+alias v="nvim"
 alias vim="nvim"
 alias cfg="vim ~/.zshrc"
 
@@ -20,3 +20,4 @@ alias la="ls -la"
 alias t="sesh connect"
 alias lg="lazygit"
 alias d="dotnet"
+alias z="cd"

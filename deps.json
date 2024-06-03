@@ -82,6 +82,16 @@
       "name": "ag",
       "cmd": "ag --version",
       "help": "https://github.com/ggreer/the_silver_searcher"
+    },
+    {
+      "name": "sesh",
+      "cmd": "sesh --version",
+      "help": "https://github.com/joshmedeski/sesh?tab=readme-ov-file"
+    },
+    {
+      "name": "gum",
+      "cmd": "gum --version",
+      "help": "https://github.com/charmbracelet/gum"
     }
   ]
 }
