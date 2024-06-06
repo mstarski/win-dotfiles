@@ -7,17 +7,17 @@
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "left"
+                "direction": "right"
             },
-            "keys": "alt+h"
+            "keys": "alt+l"
         },
         {
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "right"
+                "direction": "left"
             },
-            "keys": "alt+l"
+            "keys": "alt+h"
         },
         {
             "command": "openNewTabDropdown",
@@ -28,13 +28,6 @@
             {
                 "action": "copy",
                 "singleLine": false
-            }
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
             }
         },
         {
@@ -90,6 +83,13 @@
             "keys": "ctrl+shift+space"
         },
         {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            }
+        },
+        {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
@@ -113,17 +113,17 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "right"
-            }
-        },
-        {
-            "command": 
-            {
                 "action": "moveFocus",
                 "direction": "down"
             },
             "keys": "alt+j"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "right"
+            }
         },
         {
             "command": "paste"
@@ -134,6 +134,7 @@
     "copyOnSelect": false,
     "defaultProfile": "{190101b4-7fde-5219-90b2-0947ed51033f}",
     "disableAnimations": true,
+    "initialCols": 120,
     "launchMode": "default",
     "minimizeToNotificationArea": false,
     "newTabMenu": 
@@ -181,11 +182,12 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
+                "adjustIndistinguishableColors": "indexed",
                 "antialiasingMode": "grayscale",
                 "backgroundImage": "desktopWallpaper",
                 "backgroundImageOpacity": 0.0,
                 "bellStyle": "none",
-                "colorScheme": "Catppuccin Macchiato",
+                "colorScheme": "Gruvbox Light",
                 "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
                 "cursorShape": "filledBox",
                 "experimental.retroTerminalEffect": false,
@@ -202,7 +204,7 @@
                 "name": "fedora",
                 "opacity": 100,
                 "padding": "0",
-                "scrollbarState": "hidden",
+                "scrollbarState": "always",
                 "source": "Windows.Terminal.Wsl",
                 "useAcrylic": false,
                 "useAtlasEngine": false
@@ -279,6 +281,29 @@
             "selectionBackground": "#5B6078",
             "white": "#B8C0E0",
             "yellow": "#EED49F"
+        },
+        {
+            "background": "#FBF1C7",
+            "black": "#FBF1C7",
+            "blue": "#076678",
+            "brightBlack": "#9D8374",
+            "brightBlue": "#458588",
+            "brightCyan": "#689D69",
+            "brightGreen": "#98971A",
+            "brightPurple": "#B16186",
+            "brightRed": "#CC241D",
+            "brightWhite": "#7C6F64",
+            "brightYellow": "#D79921",
+            "cursorColor": "#282828",
+            "cyan": "#427B58",
+            "foreground": "#282828",
+            "green": "#79740E",
+            "name": "Gruvbox Light",
+            "purple": "#8F3F71",
+            "red": "#9D0006",
+            "selectionBackground": "#D5C4A1",
+            "white": "#3C3836",
+            "yellow": "#B57614"
         },
         {
             "background": "#282C34",
