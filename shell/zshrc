@@ -63,5 +63,9 @@ if (( $+commands[go] )); then
 fi
 
 if (( $+commands[tmux] )); then
-  [[ ! -n $TMUX ]] && (tmux attach || tmux new-session -s $(whoami))
+  if (( $+TMUX )); then
+    tmux switch-client -t $(whoami)
+  else
+    tmux attach -t $(whoami) || tmux new -s $(whoami)
+  fi
 fi
