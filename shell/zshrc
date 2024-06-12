@@ -64,8 +64,12 @@ fi
 
 if (( $+commands[tmux] )); then
   if (( $+TMUX )); then
-    tmux switch-client -t $(whoami)
+    # Do nothing when creating a new window
   else
-    tmux attach -t $(whoami) || tmux new -s $(whoami)
+    if tmux has-session -t $(whoami) 2>/dev/null; then
+      tmux attach -t $(whoami)
+    else
+      tmux new -s $(whoami)
+    fi
   fi
 fi

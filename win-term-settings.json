@@ -1,568 +1,666 @@
 {
-    "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "keys": "alt+l"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "keys": "alt+h"
-        },
-        {
-            "command": "openNewTabDropdown",
-            "keys": "ctrl+shift+t"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            }
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+left"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+right"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+shift+plus"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+shift+minus"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+down"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+up"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+c"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+v"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+n"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+enter"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+\\"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+'"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+space"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
-            }
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "up"
-            },
-            "keys": "alt+k"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+j"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "right"
-            }
-        },
-        {
-            "command": "paste"
-        }
-    ],
-    "alwaysShowTabs": false,
-    "copyFormatting": "none",
-    "copyOnSelect": false,
-    "defaultProfile": "{190101b4-7fde-5219-90b2-0947ed51033f}",
-    "disableAnimations": true,
-    "initialCols": 120,
-    "launchMode": "default",
-    "minimizeToNotificationArea": false,
-    "newTabMenu": 
-    [
-        {
-            "type": "remainingProfiles"
-        }
-    ],
-    "newTabPosition": "afterCurrentTab",
-    "profiles": 
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
     {
-        "defaults": 
-        {
-            "colorScheme": "Tango Dark",
-            "opacity": 76,
-            "useAcrylic": true,
-            "useAtlasEngine": true
-        },
-        "list": 
-        [
-            {
-                "colorScheme": "Ubuntu-22.04-ColorScheme",
-                "font": 
-                {
-                    "face": "JetBrainsMono NF"
-                },
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell"
-            },
-            {
-                "colorScheme": "zenwritten_dark",
-                "font": 
-                {
-                    "face": "JetBrainsMono NF"
-                },
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": true,
-                "name": "Command Prompt"
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": true,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
-                "adjustIndistinguishableColors": "indexed",
-                "antialiasingMode": "grayscale",
-                "backgroundImage": "desktopWallpaper",
-                "backgroundImageOpacity": 0.0,
-                "bellStyle": "none",
-                "colorScheme": "Gruvbox Light",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
-                "cursorShape": "filledBox",
-                "experimental.retroTerminalEffect": false,
-                "font": 
-                {
-                    "cellHeight": "1.3",
-                    "face": "MesloLGSDZ Nerd Font Mono",
-                    "size": 13.0,
-                    "weight": "normal"
-                },
-                "guid": "{190101b4-7fde-5219-90b2-0947ed51033f}",
-                "hidden": false,
-                "intenseTextStyle": "none",
-                "name": "fedora",
-                "opacity": 100,
-                "padding": "0",
-                "scrollbarState": "always",
-                "source": "Windows.Terminal.Wsl",
-                "useAcrylic": false,
-                "useAtlasEngine": false
-            }
-        ]
+      "command": {
+        "action": "moveFocus",
+        "direction": "left"
+      },
+      "keys": "alt+h"
     },
-    "schemes": 
-    [
-        {
-            "background": "#0C0C0C",
-            "black": "#0C0C0C",
-            "blue": "#0037DA",
-            "brightBlack": "#767676",
-            "brightBlue": "#3B78FF",
-            "brightCyan": "#61D6D6",
-            "brightGreen": "#16C60C",
-            "brightPurple": "#B4009E",
-            "brightRed": "#E74856",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#F9F1A5",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#3A96DD",
-            "foreground": "#CCCCCC",
-            "green": "#13A10E",
-            "name": "Campbell",
-            "purple": "#881798",
-            "red": "#C50F1F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#CCCCCC",
-            "yellow": "#C19C00"
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "right"
+      },
+      "keys": "alt+l"
+    },
+    {
+      "command": "openNewTabDropdown",
+      "keys": "ctrl+shift+t"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "down"
+      }
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+left"
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+right"
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+shift+plus"
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+shift+minus"
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+down"
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+up"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+c"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+v"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+n"
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+enter"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+\\"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+'"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+space"
+    },
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      }
+    },
+    {
+      "command": "find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "keys": "alt+shift+d"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "up"
+      },
+      "keys": "alt+k"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "right"
+      }
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "down"
+      },
+      "keys": "alt+j"
+    },
+    {
+      "command": "paste"
+    }
+  ],
+  "alwaysShowTabs": false,
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{190101b4-7fde-5219-90b2-0947ed51033f}",
+  "disableAnimations": true,
+  "initialCols": 120,
+  "launchMode": "default",
+  "minimizeToNotificationArea": false,
+  "newTabMenu": [
+    {
+      "type": "remainingProfiles"
+    }
+  ],
+  "newTabPosition": "afterCurrentTab",
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Tango Dark",
+      "opacity": 76,
+      "useAcrylic": true,
+      "useAtlasEngine": true
+    },
+    "list": [
+      {
+        "colorScheme": "Ubuntu-22.04-ColorScheme",
+        "font": {
+          "face": "JetBrainsMono NF"
         },
-        {
-            "background": "#012456",
-            "black": "#0C0C0C",
-            "blue": "#0037DA",
-            "brightBlack": "#767676",
-            "brightBlue": "#3B78FF",
-            "brightCyan": "#61D6D6",
-            "brightGreen": "#16C60C",
-            "brightPurple": "#B4009E",
-            "brightRed": "#E74856",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#F9F1A5",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#3A96DD",
-            "foreground": "#CCCCCC",
-            "green": "#13A10E",
-            "name": "Campbell Powershell",
-            "purple": "#881798",
-            "red": "#C50F1F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#CCCCCC",
-            "yellow": "#C19C00"
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell"
+      },
+      {
+        "colorScheme": "zenwritten_dark",
+        "font": {
+          "face": "JetBrainsMono NF"
         },
-        {
-            "background": "#24273A",
-            "black": "#494D64",
-            "blue": "#8AADF4",
-            "brightBlack": "#5B6078",
-            "brightBlue": "#8AADF4",
-            "brightCyan": "#8BD5CA",
-            "brightGreen": "#A6DA95",
-            "brightPurple": "#F5BDE6",
-            "brightRed": "#ED8796",
-            "brightWhite": "#A5ADCB",
-            "brightYellow": "#EED49F",
-            "cursorColor": "#F4DBD6",
-            "cyan": "#8BD5CA",
-            "foreground": "#CAD3F5",
-            "green": "#A6DA95",
-            "name": "Catppuccin Macchiato",
-            "purple": "#F5BDE6",
-            "red": "#ED8796",
-            "selectionBackground": "#5B6078",
-            "white": "#B8C0E0",
-            "yellow": "#EED49F"
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": true,
+        "name": "Command Prompt"
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": true,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "adjustIndistinguishableColors": "indexed",
+        "antialiasingMode": "grayscale",
+        "backgroundImage": "desktopWallpaper",
+        "backgroundImageOpacity": 0.0,
+        "bellStyle": "none",
+        "colorScheme": "GruvboxDark",
+        "commandline": "C:\\WINDOWS\\system32\\wsl.exe",
+        "cursorShape": "filledBox",
+        "experimental.retroTerminalEffect": false,
+        "font": {
+          "cellHeight": "1.3",
+          "face": "MesloLGSDZ Nerd Font Mono",
+          "size": 13.0,
+          "weight": "normal"
         },
-        {
-            "background": "#FBF1C7",
-            "black": "#FBF1C7",
-            "blue": "#076678",
-            "brightBlack": "#9D8374",
-            "brightBlue": "#458588",
-            "brightCyan": "#689D69",
-            "brightGreen": "#98971A",
-            "brightPurple": "#B16186",
-            "brightRed": "#CC241D",
-            "brightWhite": "#7C6F64",
-            "brightYellow": "#D79921",
-            "cursorColor": "#282828",
-            "cyan": "#427B58",
-            "foreground": "#282828",
-            "green": "#79740E",
-            "name": "Gruvbox Light",
-            "purple": "#8F3F71",
-            "red": "#9D0006",
-            "selectionBackground": "#D5C4A1",
-            "white": "#3C3836",
-            "yellow": "#B57614"
-        },
-        {
-            "background": "#282C34",
-            "black": "#282C34",
-            "blue": "#61AFEF",
-            "brightBlack": "#5A6374",
-            "brightBlue": "#61AFEF",
-            "brightCyan": "#56B6C2",
-            "brightGreen": "#98C379",
-            "brightPurple": "#C678DD",
-            "brightRed": "#E06C75",
-            "brightWhite": "#DCDFE4",
-            "brightYellow": "#E5C07B",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#56B6C2",
-            "foreground": "#DCDFE4",
-            "green": "#98C379",
-            "name": "One Half Dark",
-            "purple": "#C678DD",
-            "red": "#E06C75",
-            "selectionBackground": "#FFFFFF",
-            "white": "#DCDFE4",
-            "yellow": "#E5C07B"
-        },
-        {
-            "background": "#FAFAFA",
-            "black": "#383A42",
-            "blue": "#0184BC",
-            "brightBlack": "#4F525D",
-            "brightBlue": "#61AFEF",
-            "brightCyan": "#56B5C1",
-            "brightGreen": "#98C379",
-            "brightPurple": "#C577DD",
-            "brightRed": "#DF6C75",
-            "brightWhite": "#FFFFFF",
-            "brightYellow": "#E4C07A",
-            "cursorColor": "#4F525D",
-            "cyan": "#0997B3",
-            "foreground": "#383A42",
-            "green": "#50A14F",
-            "name": "One Half Light",
-            "purple": "#A626A4",
-            "red": "#E45649",
-            "selectionBackground": "#FFFFFF",
-            "white": "#FAFAFA",
-            "yellow": "#C18301"
-        },
-        {
-            "background": "#002B36",
-            "black": "#002B36",
-            "blue": "#268BD2",
-            "brightBlack": "#073642",
-            "brightBlue": "#839496",
-            "brightCyan": "#93A1A1",
-            "brightGreen": "#586E75",
-            "brightPurple": "#6C71C4",
-            "brightRed": "#CB4B16",
-            "brightWhite": "#FDF6E3",
-            "brightYellow": "#657B83",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#2AA198",
-            "foreground": "#839496",
-            "green": "#859900",
-            "name": "Solarized Dark",
-            "purple": "#D33682",
-            "red": "#DC322F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#EEE8D5",
-            "yellow": "#B58900"
-        },
-        {
-            "background": "#FDF6E3",
-            "black": "#002B36",
-            "blue": "#268BD2",
-            "brightBlack": "#073642",
-            "brightBlue": "#839496",
-            "brightCyan": "#93A1A1",
-            "brightGreen": "#586E75",
-            "brightPurple": "#6C71C4",
-            "brightRed": "#CB4B16",
-            "brightWhite": "#FDF6E3",
-            "brightYellow": "#657B83",
-            "cursorColor": "#002B36",
-            "cyan": "#2AA198",
-            "foreground": "#657B83",
-            "green": "#859900",
-            "name": "Solarized Light",
-            "purple": "#D33682",
-            "red": "#DC322F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#EEE8D5",
-            "yellow": "#B58900"
-        },
-        {
-            "background": "#000000",
-            "black": "#000000",
-            "blue": "#3465A4",
-            "brightBlack": "#555753",
-            "brightBlue": "#729FCF",
-            "brightCyan": "#34E2E2",
-            "brightGreen": "#8AE234",
-            "brightPurple": "#AD7FA8",
-            "brightRed": "#EF2929",
-            "brightWhite": "#EEEEEC",
-            "brightYellow": "#FCE94F",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#06989A",
-            "foreground": "#D3D7CF",
-            "green": "#4E9A06",
-            "name": "Tango Dark",
-            "purple": "#75507B",
-            "red": "#CC0000",
-            "selectionBackground": "#FFFFFF",
-            "white": "#D3D7CF",
-            "yellow": "#C4A000"
-        },
-        {
-            "background": "#FFFFFF",
-            "black": "#000000",
-            "blue": "#3465A4",
-            "brightBlack": "#555753",
-            "brightBlue": "#729FCF",
-            "brightCyan": "#34E2E2",
-            "brightGreen": "#8AE234",
-            "brightPurple": "#AD7FA8",
-            "brightRed": "#EF2929",
-            "brightWhite": "#EEEEEC",
-            "brightYellow": "#FCE94F",
-            "cursorColor": "#000000",
-            "cyan": "#06989A",
-            "foreground": "#555753",
-            "green": "#4E9A06",
-            "name": "Tango Light",
-            "purple": "#75507B",
-            "red": "#CC0000",
-            "selectionBackground": "#FFFFFF",
-            "white": "#D3D7CF",
-            "yellow": "#C4A000"
-        },
-        {
-            "background": "#E1E2E7",
-            "black": "#E9E9ED",
-            "blue": "#2E7DE9",
-            "brightBlack": "#A1A6C5",
-            "brightBlue": "#2E7DE9",
-            "brightCyan": "#007197",
-            "brightGreen": "#587539",
-            "brightPurple": "#7847BD",
-            "brightRed": "#F52A65",
-            "brightWhite": "#3760BF",
-            "brightYellow": "#8C6C3E",
-            "cursorColor": "#3760BF",
-            "cyan": "#007197",
-            "foreground": "#3760BF",
-            "green": "#587539",
-            "name": "Tokyo Night Day",
-            "purple": "#9854F1",
-            "red": "#F52A65",
-            "selectionBackground": "#B6BFE2",
-            "white": "#6172B0",
-            "yellow": "#8C6C3E"
-        },
-        {
-            "background": "#300A24",
-            "black": "#171421",
-            "blue": "#0037DA",
-            "brightBlack": "#767676",
-            "brightBlue": "#08458F",
-            "brightCyan": "#2C9FB3",
-            "brightGreen": "#26A269",
-            "brightPurple": "#A347BA",
-            "brightRed": "#C01C28",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#A2734C",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#3A96DD",
-            "foreground": "#FFFFFF",
-            "green": "#26A269",
-            "name": "Ubuntu-22.04-ColorScheme",
-            "purple": "#881798",
-            "red": "#C21A23",
-            "selectionBackground": "#FFFFFF",
-            "white": "#CCCCCC",
-            "yellow": "#A2734C"
-        },
-        {
-            "background": "#1E1E1E",
-            "black": "#1E1E1E",
-            "blue": "#569CD6",
-            "brightBlack": "#545454",
-            "brightBlue": "#569CD6",
-            "brightCyan": "#56B6C2",
-            "brightGreen": "#6A9955",
-            "brightPurple": "#C586C0",
-            "brightRed": "#F44747",
-            "brightWhite": "#D4D4D4",
-            "brightYellow": "#DCDCAA",
-            "cursorColor": "#AEAFAD",
-            "cyan": "#56B6C2",
-            "foreground": "#D4D4D4",
-            "green": "#6A9955",
-            "name": "VS Code",
-            "purple": "#C586C0",
-            "red": "#F44747",
-            "selectionBackground": "#264F78",
-            "white": "#D4D4D4",
-            "yellow": "#DCDCAA"
-        },
-        {
-            "background": "#000000",
-            "black": "#000000",
-            "blue": "#000080",
-            "brightBlack": "#808080",
-            "brightBlue": "#0000FF",
-            "brightCyan": "#00FFFF",
-            "brightGreen": "#00FF00",
-            "brightPurple": "#FF00FF",
-            "brightRed": "#FF0000",
-            "brightWhite": "#FFFFFF",
-            "brightYellow": "#FFFF00",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#008080",
-            "foreground": "#C0C0C0",
-            "green": "#008000",
-            "name": "Vintage",
-            "purple": "#800080",
-            "red": "#800000",
-            "selectionBackground": "#FFFFFF",
-            "white": "#C0C0C0",
-            "yellow": "#808000"
-        },
-        {
-            "background": "#282C34",
-            "black": "#282C34",
-            "blue": "#6099C0",
-            "brightBlack": "#3D3839",
-            "brightBlue": "#61ABDA",
-            "brightCyan": "#65B8C1",
-            "brightGreen": "#8BAE68",
-            "brightPurple": "#CF86C1",
-            "brightRed": "#E8838F",
-            "brightWhite": "#8E8E8E",
-            "brightYellow": "#D68C67",
-            "cursorColor": "#C9C9C9",
-            "cyan": "#66A5AD",
-            "foreground": "#BBBBBB",
-            "green": "#819B69",
-            "name": "zenwritten_dark",
-            "purple": "#B279A7",
-            "red": "#DE6E7C",
-            "selectionBackground": "#404040",
-            "white": "#BBBBBB",
-            "yellow": "#B77E64"
-        }
-    ],
-    "showTabsInTitlebar": false,
-    "showTerminalTitleInTitlebar": false,
-    "theme": "dark",
-    "themes": [],
-    "useAcrylicInTabRow": false,
-    "windowingBehavior": "useNew"
+        "guid": "{190101b4-7fde-5219-90b2-0947ed51033f}",
+        "hidden": false,
+        "intenseTextStyle": "none",
+        "name": "fedora",
+        "opacity": 100,
+        "padding": "0",
+        "scrollbarState": "hidden",
+        "source": "Windows.Terminal.Wsl",
+        "useAcrylic": false,
+        "useAtlasEngine": false
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "background": "#0C0C0C",
+      "black": "#0C0C0C",
+      "blue": "#0037DA",
+      "brightBlack": "#767676",
+      "brightBlue": "#3B78FF",
+      "brightCyan": "#61D6D6",
+      "brightGreen": "#16C60C",
+      "brightPurple": "#B4009E",
+      "brightRed": "#E74856",
+      "brightWhite": "#F2F2F2",
+      "brightYellow": "#F9F1A5",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#3A96DD",
+      "foreground": "#CCCCCC",
+      "green": "#13A10E",
+      "name": "Campbell",
+      "purple": "#881798",
+      "red": "#C50F1F",
+      "selectionBackground": "#FFFFFF",
+      "white": "#CCCCCC",
+      "yellow": "#C19C00"
+    },
+    {
+      "background": "#012456",
+      "black": "#0C0C0C",
+      "blue": "#0037DA",
+      "brightBlack": "#767676",
+      "brightBlue": "#3B78FF",
+      "brightCyan": "#61D6D6",
+      "brightGreen": "#16C60C",
+      "brightPurple": "#B4009E",
+      "brightRed": "#E74856",
+      "brightWhite": "#F2F2F2",
+      "brightYellow": "#F9F1A5",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#3A96DD",
+      "foreground": "#CCCCCC",
+      "green": "#13A10E",
+      "name": "Campbell Powershell",
+      "purple": "#881798",
+      "red": "#C50F1F",
+      "selectionBackground": "#FFFFFF",
+      "white": "#CCCCCC",
+      "yellow": "#C19C00"
+    },
+    {
+      "background": "#24273A",
+      "black": "#494D64",
+      "blue": "#8AADF4",
+      "brightBlack": "#5B6078",
+      "brightBlue": "#8AADF4",
+      "brightCyan": "#8BD5CA",
+      "brightGreen": "#A6DA95",
+      "brightPurple": "#F5BDE6",
+      "brightRed": "#ED8796",
+      "brightWhite": "#A5ADCB",
+      "brightYellow": "#EED49F",
+      "cursorColor": "#F4DBD6",
+      "cyan": "#8BD5CA",
+      "foreground": "#CAD3F5",
+      "green": "#A6DA95",
+      "name": "Catppuccin Macchiato",
+      "purple": "#F5BDE6",
+      "red": "#ED8796",
+      "selectionBackground": "#5B6078",
+      "white": "#B8C0E0",
+      "yellow": "#EED49F"
+    },
+    {
+      "background": "#101216",
+      "black": "#000000",
+      "blue": "#6CA4F8",
+      "brightBlack": "#4D4D4D",
+      "brightBlue": "#6CA4F8",
+      "brightCyan": "#2B7489",
+      "brightGreen": "#56D364",
+      "brightPurple": "#DB61A2",
+      "brightRed": "#F78166",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#E3B341",
+      "cursorColor": "#C9D1D9",
+      "cyan": "#2B7489",
+      "foreground": "#8B949E",
+      "green": "#56D364",
+      "name": "GitHub Dark",
+      "purple": "#DB61A2",
+      "red": "#F78166",
+      "selectionBackground": "#3B5070",
+      "white": "#FFFFFF",
+      "yellow": "#E3B341"
+    },
+    {
+      "background": "#FBF1C7",
+      "black": "#FBF1C7",
+      "blue": "#076678",
+      "brightBlack": "#9D8374",
+      "brightBlue": "#458588",
+      "brightCyan": "#689D69",
+      "brightGreen": "#98971A",
+      "brightPurple": "#B16186",
+      "brightRed": "#CC241D",
+      "brightWhite": "#7C6F64",
+      "brightYellow": "#D79921",
+      "cursorColor": "#282828",
+      "cyan": "#427B58",
+      "foreground": "#282828",
+      "green": "#79740E",
+      "name": "Gruvbox Light",
+      "purple": "#8F3F71",
+      "red": "#9D0006",
+      "selectionBackground": "#D5C4A1",
+      "white": "#3C3836",
+      "yellow": "#B57614"
+    },
+    {
+      "background": "#282828",
+      "black": "#282828",
+      "blue": "#458588",
+      "brightBlack": "#928374",
+      "brightBlue": "#83A598",
+      "brightCyan": "#8EC07C",
+      "brightGreen": "#B8BB26",
+      "brightPurple": "#D3869B",
+      "brightRed": "#FB4934",
+      "brightWhite": "#EBDBB2",
+      "brightYellow": "#FABD2F",
+      "cursorColor": "#EBDBB2",
+      "cyan": "#689D6A",
+      "foreground": "#EBDBB2",
+      "green": "#98971A",
+      "name": "GruvboxDark",
+      "purple": "#B16286",
+      "red": "#CC241D",
+      "selectionBackground": "#665C54",
+      "white": "#A89984",
+      "yellow": "#D79921"
+    },
+    {
+      "background": "#282C34",
+      "black": "#282C34",
+      "blue": "#61AFEF",
+      "brightBlack": "#5A6374",
+      "brightBlue": "#61AFEF",
+      "brightCyan": "#56B6C2",
+      "brightGreen": "#98C379",
+      "brightPurple": "#C678DD",
+      "brightRed": "#E06C75",
+      "brightWhite": "#DCDFE4",
+      "brightYellow": "#E5C07B",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#56B6C2",
+      "foreground": "#DCDFE4",
+      "green": "#98C379",
+      "name": "One Half Dark",
+      "purple": "#C678DD",
+      "red": "#E06C75",
+      "selectionBackground": "#FFFFFF",
+      "white": "#DCDFE4",
+      "yellow": "#E5C07B"
+    },
+    {
+      "background": "#FAFAFA",
+      "black": "#383A42",
+      "blue": "#0184BC",
+      "brightBlack": "#4F525D",
+      "brightBlue": "#61AFEF",
+      "brightCyan": "#56B5C1",
+      "brightGreen": "#98C379",
+      "brightPurple": "#C577DD",
+      "brightRed": "#DF6C75",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#E4C07A",
+      "cursorColor": "#4F525D",
+      "cyan": "#0997B3",
+      "foreground": "#383A42",
+      "green": "#50A14F",
+      "name": "One Half Light",
+      "purple": "#A626A4",
+      "red": "#E45649",
+      "selectionBackground": "#FFFFFF",
+      "white": "#FAFAFA",
+      "yellow": "#C18301"
+    },
+    {
+      "background": "#1E2127",
+      "black": "#1E2127",
+      "blue": "#61AFEF",
+      "brightBlack": "#5C6370",
+      "brightBlue": "#61AFEF",
+      "brightCyan": "#56B6C2",
+      "brightGreen": "#98C379",
+      "brightPurple": "#C678DD",
+      "brightRed": "#E06C75",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#D19A66",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#56B6C2",
+      "foreground": "#ABB2BF",
+      "green": "#98C379",
+      "name": "OneDark",
+      "purple": "#C678DD",
+      "red": "#E06C75",
+      "selectionBackground": "#FFFFFF",
+      "white": "#ABB2BF",
+      "yellow": "#D19A66"
+    },
+    {
+      "background": "#191724",
+      "black": "#706E86",
+      "blue": "#31748F",
+      "brightBlack": "#706E86",
+      "brightBlue": "#31748F",
+      "brightCyan": "#EBBCBA",
+      "brightGreen": "#9CCFD8",
+      "brightPurple": "#C4A7E7",
+      "brightRed": "#EB6F92",
+      "brightWhite": "#E0DEF4",
+      "brightYellow": "#F6C177",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#EBBCBA",
+      "foreground": "#E0DEF4",
+      "green": "#9CCFD8",
+      "name": "Rose Pine",
+      "purple": "#C4A7E7",
+      "red": "#EB6F92",
+      "selectionBackground": "#FFFFFF",
+      "white": "#E0DEF4",
+      "yellow": "#F6C177"
+    },
+    {
+      "background": "#002B36",
+      "black": "#002B36",
+      "blue": "#268BD2",
+      "brightBlack": "#073642",
+      "brightBlue": "#839496",
+      "brightCyan": "#93A1A1",
+      "brightGreen": "#586E75",
+      "brightPurple": "#6C71C4",
+      "brightRed": "#CB4B16",
+      "brightWhite": "#FDF6E3",
+      "brightYellow": "#657B83",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#2AA198",
+      "foreground": "#839496",
+      "green": "#859900",
+      "name": "Solarized Dark",
+      "purple": "#D33682",
+      "red": "#DC322F",
+      "selectionBackground": "#FFFFFF",
+      "white": "#EEE8D5",
+      "yellow": "#B58900"
+    },
+    {
+      "background": "#FDF6E3",
+      "black": "#002B36",
+      "blue": "#268BD2",
+      "brightBlack": "#073642",
+      "brightBlue": "#839496",
+      "brightCyan": "#93A1A1",
+      "brightGreen": "#586E75",
+      "brightPurple": "#6C71C4",
+      "brightRed": "#CB4B16",
+      "brightWhite": "#FDF6E3",
+      "brightYellow": "#657B83",
+      "cursorColor": "#002B36",
+      "cyan": "#2AA198",
+      "foreground": "#657B83",
+      "green": "#859900",
+      "name": "Solarized Light",
+      "purple": "#D33682",
+      "red": "#DC322F",
+      "selectionBackground": "#FFFFFF",
+      "white": "#EEE8D5",
+      "yellow": "#B58900"
+    },
+    {
+      "background": "#000000",
+      "black": "#000000",
+      "blue": "#3465A4",
+      "brightBlack": "#555753",
+      "brightBlue": "#729FCF",
+      "brightCyan": "#34E2E2",
+      "brightGreen": "#8AE234",
+      "brightPurple": "#AD7FA8",
+      "brightRed": "#EF2929",
+      "brightWhite": "#EEEEEC",
+      "brightYellow": "#FCE94F",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#06989A",
+      "foreground": "#D3D7CF",
+      "green": "#4E9A06",
+      "name": "Tango Dark",
+      "purple": "#75507B",
+      "red": "#CC0000",
+      "selectionBackground": "#FFFFFF",
+      "white": "#D3D7CF",
+      "yellow": "#C4A000"
+    },
+    {
+      "background": "#FFFFFF",
+      "black": "#000000",
+      "blue": "#3465A4",
+      "brightBlack": "#555753",
+      "brightBlue": "#729FCF",
+      "brightCyan": "#34E2E2",
+      "brightGreen": "#8AE234",
+      "brightPurple": "#AD7FA8",
+      "brightRed": "#EF2929",
+      "brightWhite": "#EEEEEC",
+      "brightYellow": "#FCE94F",
+      "cursorColor": "#000000",
+      "cyan": "#06989A",
+      "foreground": "#555753",
+      "green": "#4E9A06",
+      "name": "Tango Light",
+      "purple": "#75507B",
+      "red": "#CC0000",
+      "selectionBackground": "#FFFFFF",
+      "white": "#D3D7CF",
+      "yellow": "#C4A000"
+    },
+    {
+      "background": "#E1E2E7",
+      "black": "#E9E9ED",
+      "blue": "#2E7DE9",
+      "brightBlack": "#A1A6C5",
+      "brightBlue": "#2E7DE9",
+      "brightCyan": "#007197",
+      "brightGreen": "#587539",
+      "brightPurple": "#7847BD",
+      "brightRed": "#F52A65",
+      "brightWhite": "#3760BF",
+      "brightYellow": "#8C6C3E",
+      "cursorColor": "#3760BF",
+      "cyan": "#007197",
+      "foreground": "#3760BF",
+      "green": "#587539",
+      "name": "Tokyo Night Day",
+      "purple": "#9854F1",
+      "red": "#F52A65",
+      "selectionBackground": "#B6BFE2",
+      "white": "#6172B0",
+      "yellow": "#8C6C3E"
+    },
+    {
+      "background": "#16161E",
+      "black": "#363B54",
+      "blue": "#7AA2F7",
+      "brightBlack": "#363B54",
+      "brightBlue": "#7AA2F7",
+      "brightCyan": "#7DCFFF",
+      "brightGreen": "#41A6B5",
+      "brightPurple": "#BB9AF7",
+      "brightRed": "#F7768E",
+      "brightWhite": "#ACB0D0",
+      "brightYellow": "#E0AF68",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#7DCFFF",
+      "foreground": "#787C99",
+      "green": "#41A6B5",
+      "name": "TokyoNight",
+      "purple": "#BB9AF7",
+      "red": "#F7768E",
+      "selectionBackground": "#FFFFFF",
+      "white": "#787C99",
+      "yellow": "#E0AF68"
+    },
+    {
+      "background": "#300A24",
+      "black": "#171421",
+      "blue": "#0037DA",
+      "brightBlack": "#767676",
+      "brightBlue": "#08458F",
+      "brightCyan": "#2C9FB3",
+      "brightGreen": "#26A269",
+      "brightPurple": "#A347BA",
+      "brightRed": "#C01C28",
+      "brightWhite": "#F2F2F2",
+      "brightYellow": "#A2734C",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#3A96DD",
+      "foreground": "#FFFFFF",
+      "green": "#26A269",
+      "name": "Ubuntu-22.04-ColorScheme",
+      "purple": "#881798",
+      "red": "#C21A23",
+      "selectionBackground": "#FFFFFF",
+      "white": "#CCCCCC",
+      "yellow": "#A2734C"
+    },
+    {
+      "background": "#1E1E1E",
+      "black": "#1E1E1E",
+      "blue": "#569CD6",
+      "brightBlack": "#545454",
+      "brightBlue": "#569CD6",
+      "brightCyan": "#56B6C2",
+      "brightGreen": "#6A9955",
+      "brightPurple": "#C586C0",
+      "brightRed": "#F44747",
+      "brightWhite": "#D4D4D4",
+      "brightYellow": "#DCDCAA",
+      "cursorColor": "#AEAFAD",
+      "cyan": "#56B6C2",
+      "foreground": "#D4D4D4",
+      "green": "#6A9955",
+      "name": "VS Code",
+      "purple": "#C586C0",
+      "red": "#F44747",
+      "selectionBackground": "#264F78",
+      "white": "#D4D4D4",
+      "yellow": "#DCDCAA"
+    },
+    {
+      "background": "#000000",
+      "black": "#000000",
+      "blue": "#000080",
+      "brightBlack": "#808080",
+      "brightBlue": "#0000FF",
+      "brightCyan": "#00FFFF",
+      "brightGreen": "#00FF00",
+      "brightPurple": "#FF00FF",
+      "brightRed": "#FF0000",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#FFFF00",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#008080",
+      "foreground": "#C0C0C0",
+      "green": "#008000",
+      "name": "Vintage",
+      "purple": "#800080",
+      "red": "#800000",
+      "selectionBackground": "#FFFFFF",
+      "white": "#C0C0C0",
+      "yellow": "#808000"
+    },
+    {
+      "background": "#282C34",
+      "black": "#282C34",
+      "blue": "#6099C0",
+      "brightBlack": "#3D3839",
+      "brightBlue": "#61ABDA",
+      "brightCyan": "#65B8C1",
+      "brightGreen": "#8BAE68",
+      "brightPurple": "#CF86C1",
+      "brightRed": "#E8838F",
+      "brightWhite": "#8E8E8E",
+      "brightYellow": "#D68C67",
+      "cursorColor": "#C9C9C9",
+      "cyan": "#66A5AD",
+      "foreground": "#BBBBBB",
+      "green": "#819B69",
+      "name": "zenwritten_dark",
+      "purple": "#B279A7",
+      "red": "#DE6E7C",
+      "selectionBackground": "#404040",
+      "white": "#BBBBBB",
+      "yellow": "#B77E64"
+    }
+  ],
+  "showTabsInTitlebar": false,
+  "showTerminalTitleInTitlebar": false,
+  "theme": "dark",
+  "themes": [],
+  "useAcrylicInTabRow": false,
+  "windowingBehavior": "useNew"
 }
