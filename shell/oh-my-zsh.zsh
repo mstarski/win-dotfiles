@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Pure: https://github.com/sindresorhus/pure#oh-my-zsh
 # (manual install)
-if [ -d $HOME/.zsh/pure ]; then 
+if [ -d $HOME/.zsh/pure ]; then
   fpath+=($HOME/.zsh/pure)
 
   autoload -U promptinit; promptinit

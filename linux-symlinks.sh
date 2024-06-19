@@ -3,6 +3,8 @@
 USER_HOME=/home/$(logname)
 DOTFILES=$USER_HOME/.config/win-dotfiles
 
+echo $USER_HOME
+
 # $1: source file
 # $2: destination file
 function create_symlink {
@@ -35,4 +37,4 @@ fi
 create_symlink /usr/bin/batcat /usr/bin/bat
 create_symlink $DOTFILES/shell/zshrc $USER_HOME/.zshrc
 create_symlink $DOTFILES/tmux.conf $USER_HOME/.tmux.conf
-create_symlink $DOTFILES/nvim $USER_HOME/.config/nvim
+# create_symlink $DOTFILES/nvim $USER_HOME/.config/nvim
