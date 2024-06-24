@@ -44,8 +44,8 @@ if [[ ! -d $HOME/.fzf ]]; then
 	$HOME/.fzf/install
 fi
 
-if [[ ! -f /bin/pipx ]]; then
-	sudo dnf install pipx && \
+if ! command -v pipx &> /dev/null; then
+	sudo dnf install pipx -y && \
 	pipx ensurepath
 fi
 

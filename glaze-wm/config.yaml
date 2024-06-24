@@ -167,7 +167,13 @@ window_rules:
     match_title: "WingetUI"
 
   - command: "set floating"
+    match_title: "Pokemon TCG Live"
+
+  - command: "set floating"
     match_title: "pinentry-qt"
+
+  - command: "set floating"
+    match_title: "Bitwarden"
 
   - command: "set floating"
     match_process_name: "/explorer/"
@@ -261,7 +267,8 @@ keybindings:
   - command: "exec wt"
     binding: "Alt+Enter"
 
-  - command: 'exec ''chrome.exe'' --args --profile-directory="Profile 1"'
+  # Launch default browser
+  - command: 'exec %userprofile%\Scripts\LaunchBrowser.exe'
     binding: "Alt+F"
 
   - command: "exec '%ProgramFiles%/Mozilla Thunderbird/thunderbird.exe'"

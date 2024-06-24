@@ -1,4 +1,5 @@
 [wsl2]
+networkingMode=mirrored
 memory=20GB
 processors=8
 swap=16GB

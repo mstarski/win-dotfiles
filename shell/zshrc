@@ -44,6 +44,7 @@ fi
 
 export GPG_TTY="$(tty)"
 
+
 if [[ -n $MS_WSL_YUBIKEY ]]; then
   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   gpgconf --launch gpg-agent
@@ -72,4 +73,15 @@ if (( $+commands[tmux] )); then
       tmux new -s $(whoami)
     fi
   fi
+fi
+
+if (( $+commands[java] )); then
+  export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+  export ANDROID_HOME="/opt/android"
+
+  export PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools/bin
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+  export PATH=$PATH:$ANDROID_HOME/emulator
+
+  export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib64/qt5/plugins/platforms
 fi
