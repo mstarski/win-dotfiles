@@ -75,6 +75,10 @@ if (( $+commands[tmux] )); then
   fi
 fi
 
+if (( $+commands[k9s] )); then
+  export KUBE_EDITOR=nvim
+fi
+
 if (( $+commands[java] )); then
   export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
   export ANDROID_HOME="/opt/android"

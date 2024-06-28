@@ -1,23 +1,32 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run as root"
+  exit
+fi
+
 if ! command -v curl &> /dev/null; then
-  sudo dnf install curl
+  dnf install curl -y
 fi
 
 if ! command -v g++ &> /dev/null; then
-  sudo dnf install gcc-c++ -y
+  dnf install gcc-c++ -y
 fi
 
 if ! command -v gcc &> /dev/null; then
-	sudo dnf install gcc -y
+	dnf install gcc -y
+fi
+
+if ! $(dnf list --installed | grep -q "dnf-plugins-core"); then
+  dnf install dnf-plugins-core -y
 fi
 
 if ! command -v cargo &> /dev/null; then
-	sudo dnf install cargo -y
+	dnf install cargo -y
 fi
 
 if ! command -v go &> /dev/null; then
-	sudo dnf install golang && \
+	dnf install golang -y && \
 	mkdir -p $HOME/go && \
 	export GOPATH=$HOME/go
 fi
@@ -28,15 +37,15 @@ if [[ ! $(go env GOPATH) == $HOME/go ]]; then
 fi
 
 if [[ ! -f /bin/zsh ]]; then
-	sudo dnf install zsh -y
+	dnf install zsh -y
 fi
 
 if [[ ! -f /bin/tmux ]]; then
-	sudo dnf install tmux -y
+	dnf install tmux -y
 fi
 
 if [[ ! -f /bin/bat ]]; then
-	sudo dnf install bat -y
+	dnf install bat -y
 fi
 
 if [[ ! -d $HOME/.fzf ]]; then
@@ -45,7 +54,7 @@ if [[ ! -d $HOME/.fzf ]]; then
 fi
 
 if ! command -v pipx &> /dev/null; then
-	sudo dnf install pipx -y && \
+	dnf install pipx -y && \
 	pipx ensurepath
 fi
 
@@ -66,7 +75,7 @@ if [[ ! -d /home/michals/.nvm ]]; then
 fi
 
 if ! command -v trash &> /dev/null; then
-	sudo dnf install python3-devel && \
+	dnf install python3-devel -y && \
 	pipx install trash-cli
 fi
 
@@ -79,7 +88,7 @@ if [[ ! -f $HOME/.cargo/bin/zoxide ]]; then
 fi
 
 if ! command -v ag &> /dev/null; then
-	sudo dnf install the_silver_searcher -y
+	dnf install the_silver_searcher -y
 fi
 
 if [[ ! -f $HOME/go/bin/sesh ]]; then
@@ -99,7 +108,7 @@ if [[ ! -d $HOME/.tmux/plugins/tpm ]]; then
 fi
 
 if [[ ! -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  sudo dnf install zsh-syntax-highlighting -y
+  dnf install zsh-syntax-highlighting -y
 fi
 
 ZSH_AUTOSUGGESTIONS_PATH=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -116,8 +125,8 @@ if [[ ! -d $ZSH_PURE_PATH ]]; then
 fi
 
 if [[ ! -f /usr/local/bin/cloudflared ]]; then
-  sudo dnf config-manager --add-repo https://pkg.cloudflare.com/cloudflared-ascii.repo
-  sudo dnf install cloudflared -y
+  dnf config-manager --add-repo https://pkg.cloudflare.com/cloudflared-ascii.repo
+  dnf install cloudflared -y
 fi
 
 
