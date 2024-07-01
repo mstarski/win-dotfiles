@@ -12,6 +12,7 @@
 - `ranger`
 - `pnpm`
 - `zoxide`
+- `nvm`
 - `zsh-autosuggestions`
 
 ### Windows
