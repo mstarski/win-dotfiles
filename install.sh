@@ -1,8 +1,16 @@
 #!/bin/bash
 
+USER=$(logname)
+HOME=/home/$USER
+PIPX_HOME=$HOME/.local/share/pipx
+
+pipx_is_installed() {
+  return $(pipx list | grep -q $1)
+}
+
 if [ "$EUID" -ne 0 ]; then
-  echo "Please run as root"
-  exit
+  echo "Please run with sudo -E"
+  exit 1
 fi
 
 if ! command -v curl &> /dev/null; then
@@ -19,6 +27,10 @@ fi
 
 if ! $(dnf list --installed | grep -q "dnf-plugins-core"); then
   dnf install dnf-plugins-core -y
+fi
+
+if ! $(dnf list --installed | grep -q "sxhkd"); then
+  dnf install sxhkd -y
 fi
 
 if ! command -v cargo &> /dev/null; then
@@ -58,8 +70,8 @@ if ! command -v pipx &> /dev/null; then
 	pipx ensurepath
 fi
 
-if ! command -v ranger &> /dev/null; then
-	pipx install ranger-fm
+if ! pipx_is_installed ranger; then
+  pipx install ranger-fm
 fi
 
 if [[ ! -d /home/michals/.nvm ]]; then
@@ -74,9 +86,9 @@ if [[ ! -d /home/michals/.nvm ]]; then
 	npm i -g pnpm
 fi
 
-if ! command -v trash &> /dev/null; then
+if ! pipx_is_installed trash-cli; then
 	dnf install python3-devel -y && \
-	pipx install trash-cli
+  pipx install trash-cli
 fi
 
 if [[ ! -f $HOME/.cargo/bin/exa ]]; then
@@ -129,4 +141,6 @@ if [[ ! -f /usr/local/bin/cloudflared ]]; then
   dnf install cloudflared -y
 fi
 
-
+if pipx_is_installed tldr; then
+  pipx install tldr
+fi
