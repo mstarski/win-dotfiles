@@ -13,7 +13,7 @@ fi
 alias lcat="/usr/bin/cat"
 alias ls="exa --icons -F"
 alias tf="terraform"
-alias gco="g co \$(git branch | fzf-tmux -d 15)"
+alias gco="g co \$(git branch | gum filter --header \"Git checkout branch\")"
 alias k="kubectl"
 alias g="git"
 alias la="ls -la"
