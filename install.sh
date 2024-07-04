@@ -39,11 +39,11 @@ fi
 
 if ! command -v go &> /dev/null; then
 	dnf install golang -y && \
-	mkdir -p $HOME/go && \
-	export GOPATH=$HOME/go
+	mkdir -p $HOME/.go && \
+	export GOPATH=$HOME/.go
 fi
 
-if [[ ! $(go env GOPATH) == $HOME/go ]]; then
+if [[ ! $(go env GOPATH) == $HOME/.go ]]; then
 	echo "Error: \$GOPATH not set properly. Exitting..."
 	exit 1
 fi
